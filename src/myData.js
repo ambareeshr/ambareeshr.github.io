@@ -13,7 +13,7 @@ const greeting = {
 const socialMediaLinks = [
   {
     name: "Github",
-    link: "https://github.com/ambareesh-ravi",
+    link: "https://github.com/ambareeshr",
     fontAwesomeIcon: "fa-github", // Reference https://fontawesome.com/icons/github?style=brands
     backgroundColor: "#181717", // Reference https://simpleicons.org/?q=github
   },
