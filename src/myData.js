@@ -6,8 +6,6 @@ const greeting = {
   logo_name: "Ambareesh",
   subTitle:
     "An Aspiring Deep Learning practitioner who enjoys building scalable and robust AI enabled applications . With strong technical skills and academic background in engineering, statistics, machine learning and full stack development.",
-  resumeLink:
-    "https://drive.google.com/open?id=1XYpYhLeqCdyx_q6l0bQoC7RgwQjAjXPf",
 };
 
 const socialMediaLinks = [
