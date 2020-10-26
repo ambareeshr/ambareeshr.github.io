@@ -1,0 +1,140 @@
+.contact-main {
+  width: 100vw;
+}
+
+.basic-contact {
+  margin-left: 5%;
+  margin-right: 5%;
+}
+
+.contact-heading-div {
+  display: flex;
+}
+
+
+.address-heading-div {
+  display: flex;
+  margin-top: 80px;
+}
+
+.contact-heading-div > * {
+  flex: 1;
+}
+
+.address-heading-div > * {
+  flex: 1;
+}
+
+.contact-heading-img-div {
+  align-items: center;
+  justify-content: center;
+}
+
+.contact-heading-text-div {
+  text-align: center;
+}
+
+
+.address-heading-text-div {
+  text-align: center;
+}
+
+.contact-heading-img-div > * {
+  max-width: 100%;
+  height: auto;
+}
+
+.contact-heading-text {
+  font-size: 56px;
+  font-weight: 400;
+  font-family: "Google Sans Medium";
+  line-height: 1.1;
+  text-align: center;
+  margin-top: 60px;
+}
+
+.address-heading-text {
+  font-size: 30px;
+  font-family: "Google Sans Regular";
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.contact-header-detail-text {
+  font-size: 20px;
+  line-height: 30px;
+  margin-top: 0px;
+  margin-left: 20px;
+  margin-right: 20px;
+  font-family: "Google Sans Medium";
+}
+
+.address-btn-div {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-top: 0;
+}
+
+
+.profile-image {
+  border-radius: 50%;
+  border: 0.4rem solid;
+  margin-left: auto;
+  width: 100%;
+  max-width: 350px;
+  height: auto;
+  box-shadow: rgba(0, 0, 0, 1) 0 30px 30px -30px;
+  transition: all 0.3s ease-out;
+}
+.profile-image:hover {
+  box-shadow: none;
+}
+.image-content-profile {
+  text-align: right;
+  flex: 20%;
+  max-width: 100%;
+  height: auto;
+}
+
+
+
+
+@media (max-width: 1380px) {
+  .contact-heading-text {
+    font-size: 50px;
+    margin-top: 60px;
+  }
+}
+
+@media (max-width: 768px) {
+  .contact-heading-text {
+    font-size: 30px;
+    margin-top: 0px;
+  }
+
+  .address-heading-text {
+    font-size: 20px;
+  }
+
+  .address-heading-div {
+    flex-direction: column;
+    margin-top: 60px;
+  }
+
+  .address-heading-text-div {
+    margin-top: 40px;
+  }
+
+  .contact-heading-div {
+    flex-direction: column;
+  }
+
+  .contact-header-detail-text {
+    font-size: 16px;
+    margin-left: 0px;
+    margin-right: 0px;
+    line-height: normal;
+    text-align: center;
+  }
+}

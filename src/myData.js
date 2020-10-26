@@ -218,8 +218,33 @@ const skills = {
 };
 
 
+// Contact Page
+const contactPageData = {
+  contactSection: {
+    title: "Contact Me",
+    profile_image_path: "android-chrome-512x512.png",
+    description:
+      "Want to discuss about any project or just wanna say Hi?",
+  },
+  addressSection: {
+    title: "Address",
+    subtitle:
+      "Sai Dharshan Apts, South Gangaiamman koil 2nd Street, Choolaimedu, Chennai-600094 ",
+    avatar_image_path: "address_image.svg",
+    location_map_link: "https://goo.gl/maps/N34TVpwA3pzqrArw8",
+  },
+  phoneSection: {
+    title: "Phone Number",
+    subtitle: "+91 9791141626",
+  },
+};
+
+
+
+
 export {
   greeting,
   socialMediaLinks,
-  skills
+  skills,
+  contactPageData
 };
