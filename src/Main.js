@@ -4,6 +4,7 @@ import Home from "./pages/home/HomeComponent";
 import Contact from "./pages/contact/ContactComponent";
 import Footer from "./shared/footer/Footer";
 import TopButton from "./shared/topButton/TopButton";
+import Education from "./pages/education/EducationComponent";
 
 
 export default class Main extends Component {
@@ -13,6 +14,7 @@ export default class Main extends Component {
     return (
         <div>
             <Home theme={this.props.theme} />
+            <Education theme={this.props.theme} />
             <Contact theme={this.props.theme} />
             <Footer theme={this.props.theme} />
             <TopButton theme={this.props.theme} />

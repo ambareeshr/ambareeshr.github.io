@@ -5,7 +5,7 @@ const greeting = {
   title: "Ambareesh R",
   logo_name: "Ambareesh",
   subTitle:
-    "An Aspiring Deep Learning practitioner who enjoys building scalable and robust AI enabled applications . With strong technical skills and academic background in engineering, statistics, machine learning and full stack development.",
+    "An Aspiring Deep Learning practitioner who is passionate about building scalable and robust AI enabled applications . With strong technical skills and academic background in engineering, statistics, machine learning and full stack development.",
 };
 
 const socialMediaLinks = [
@@ -218,6 +218,56 @@ const skills = {
 };
 
 
+const degrees = {
+  degrees: [
+    {
+      title: "Anna University, College of Engineering Guindy",
+      subtitle: "B.Tech. in Information Technology",
+      logo_path: "annaUnivLogo.png",
+      alt_name: "Anna University, CEG",
+      duration: "2015 - 2019",
+      descriptions: [
+        "⚡ Courses Taken : Data Structures, Algorithms, DBMS, OS, CA, AI etc.",
+        "⚡ Apart from this, I have done courses on Deep Learning, Data Science and Full Stack Development.",
+      ],
+      website_link: "https://www.annauniv.edu/",
+    },
+  ],
+};
+
+const certifications = {
+  certifications: [
+    {
+      title: "Deep Learning Nanodegree",
+      subtitle: "- Udacity",
+      logo_path: "aws_facebookai_logo.png",
+      certificate_link:
+        "https://confirm.udacity.com/KGNC4KFP",
+      alt_name: "Udacity",
+      color_code: "#02B3E4",
+    },
+    {
+      title: "Recommender Systems and Deep Learning in Python",
+      subtitle: "- Udemy",
+      logo_path: "udemy_logo.png",
+      certificate_link:
+        "https://ude.my/UC-2c264bae-b840-4b28-afb3-db1c58761357/",
+      alt_name: "Udemy",
+      color_code: "#0C9D5899",
+    },
+    {
+      title: "Cluster Analysis and Unsupervised Machine Learning in Python",
+      subtitle: "- Udemy",
+      logo_path: "udemy_logo.png",
+      certificate_link:
+        "https://ude.my/UC-854cf59e-757d-4612-badf-cbf00117cb32",
+      alt_name: "Udemy",
+      color_code: "#0C9D5899",
+    }
+  ],
+};
+
+
 // Contact Page
 const contactPageData = {
   contactSection: {
@@ -246,5 +296,7 @@ export {
   greeting,
   socialMediaLinks,
   skills,
+  degrees,
+  certifications,
   contactPageData
 };
