@@ -1,24 +1,31 @@
 {
   "files": {
-    "main.css": "./static/css/main.5d28296d.chunk.css",
-    "main.js": "./static/js/main.58d53bda.chunk.js",
-    "main.js.map": "./static/js/main.58d53bda.chunk.js.map",
+    "main.css": "./static/css/main.bc4c8d60.chunk.css",
+    "main.js": "./static/js/main.a94e02ae.chunk.js",
+    "main.js.map": "./static/js/main.a94e02ae.chunk.js.map",
     "runtime-main.js": "./static/js/runtime-main.060f03e5.js",
     "runtime-main.js.map": "./static/js/runtime-main.060f03e5.js.map",
-    "static/js/2.7c2c116e.chunk.js": "./static/js/2.7c2c116e.chunk.js",
-    "static/js/2.7c2c116e.chunk.js.map": "./static/js/2.7c2c116e.chunk.js.map",
+    "static/js/2.1d2d0a3f.chunk.js": "./static/js/2.1d2d0a3f.chunk.js",
+    "static/js/2.1d2d0a3f.chunk.js.map": "./static/js/2.1d2d0a3f.chunk.js.map",
     "index.html": "./index.html",
-    "precache-manifest.08331959ac2b656365b57c3e6fc1b088.js": "./precache-manifest.08331959ac2b656365b57c3e6fc1b088.js",
+    "precache-manifest.5db237d1eb788f0c3af7a774a5db67b3.js": "./precache-manifest.5db237d1eb788f0c3af7a774a5db67b3.js",
     "service-worker.js": "./service-worker.js",
-    "static/css/main.5d28296d.chunk.css.map": "./static/css/main.5d28296d.chunk.css.map",
+    "static/css/main.bc4c8d60.chunk.css.map": "./static/css/main.bc4c8d60.chunk.css.map",
     "static/media/index.css": "./static/media/Montserrat-Regular.ee653992.ttf",
     "static/media/android-chrome-512x512.png": "./static/media/android-chrome-512x512.8e08f206.png",
-    "static/media/all.css": "./static/media/fa-solid-900.c2801fb4.svg"
+    "static/media/annaUnivLogo.png": "./static/media/annaUnivLogo.67496fe3.png",
+    "static/media/aws_facebookai_logo.png": "./static/media/aws_facebookai_logo.ce626b85.png",
+    "static/media/all.css": "./static/media/fa-solid-900.c2801fb4.svg",
+    "static/media/facebookAI_logo.png": "./static/media/facebookAI_logo.144fdf95.png",
+    "static/media/linkedin_learning_logo.png": "./static/media/linkedin_learning_logo.7ba4eb88.png",
+    "static/media/pluralsight_logo.png": "./static/media/pluralsight_logo.e3893dbe.png",
+    "static/media/ps_logo.png": "./static/media/ps_logo.c7e4595a.png",
+    "static/media/udemy_logo.png": "./static/media/udemy_logo.1325194a.png"
   },
   "entrypoints": [
     "static/js/runtime-main.060f03e5.js",
-    "static/js/2.7c2c116e.chunk.js",
-    "static/css/main.5d28296d.chunk.css",
-    "static/js/main.58d53bda.chunk.js"
+    "static/js/2.1d2d0a3f.chunk.js",
+    "static/css/main.bc4c8d60.chunk.css",
+    "static/js/main.a94e02ae.chunk.js"
   ]
 }

@@ -1,19 +1,19 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "bff315bd66c5f80045a7a4c6fa8ecd83",
+    "revision": "b1823bda86fe80ebf80592871e88ccf7",
     "url": "./index.html"
   },
   {
-    "revision": "a218788bf26b19a5d7bd",
-    "url": "./static/css/main.5d28296d.chunk.css"
+    "revision": "b01f3ebca5c939585901",
+    "url": "./static/css/main.bc4c8d60.chunk.css"
   },
   {
-    "revision": "aef103c714a279512583",
-    "url": "./static/js/2.7c2c116e.chunk.js"
+    "revision": "986b0bcc1459a5cb4cad",
+    "url": "./static/js/2.1d2d0a3f.chunk.js"
   },
   {
-    "revision": "a218788bf26b19a5d7bd",
-    "url": "./static/js/main.58d53bda.chunk.js"
+    "revision": "b01f3ebca5c939585901",
+    "url": "./static/js/main.a94e02ae.chunk.js"
   },
   {
     "revision": "043b4e9a07b17071c720",
@@ -54,6 +54,14 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "8e08f20620b8dd68e710e978608c7a99",
     "url": "./static/media/android-chrome-512x512.8e08f206.png"
+  },
+  {
+    "revision": "67496fe3e60ce037b0447668384031eb",
+    "url": "./static/media/annaUnivLogo.67496fe3.png"
+  },
+  {
+    "revision": "ce626b85af3b9e48e2f846f99b77accd",
+    "url": "./static/media/aws_facebookai_logo.ce626b85.png"
   },
   {
     "revision": "06147b6cd88c7346cecd1edd060cd5de",
@@ -114,5 +122,25 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "c2801fb415f03c7b170934769d7b5397",
     "url": "./static/media/fa-solid-900.c2801fb4.svg"
+  },
+  {
+    "revision": "144fdf9501dc8ac83222f00aa2807845",
+    "url": "./static/media/facebookAI_logo.144fdf95.png"
+  },
+  {
+    "revision": "7ba4eb889a31a2119acae76719df5716",
+    "url": "./static/media/linkedin_learning_logo.7ba4eb88.png"
+  },
+  {
+    "revision": "e3893dbeaf8ee606e166ddde6865d7aa",
+    "url": "./static/media/pluralsight_logo.e3893dbe.png"
+  },
+  {
+    "revision": "c7e4595abde8aac467ba68d628114733",
+    "url": "./static/media/ps_logo.c7e4595a.png"
+  },
+  {
+    "revision": "1325194a2c3004e0b7f9e50f908c2804",
+    "url": "./static/media/udemy_logo.1325194a.png"
   }
 ]);
