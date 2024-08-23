@@ -1,36 +1,97 @@
-import React from "react";
-import "./SocialMedia.css";
+import React, { useState } from "react";
+import styled from 'styled-components';
+import { motion } from 'framer-motion';
 import { socialMediaLinks } from "../../myData";
-import styled from "styled-components";
 
-const IconWrapper = styled.span`
-  i {
-    background-color: ${(props) => props.backgroundColor};
-  }
-  &:hover i {
-    background-color: ${({ theme }) => theme.text};
-    transition: 0.3s ease-in;
-  }
+const SocialMediaContainer = styled(motion.div)`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 1rem;
+  padding: 10px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 30px;
+  backdrop-filter: blur(10px);
 `;
 
-export default function socialMedia(props) {
+const SocialMediaLink = styled(motion.a)`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: ${props => props.backgroundColor};
+  color: white;
+  font-size: 1.2rem;
+  text-decoration: none;
+  position: relative;
+  margin: 0 5px;
+`;
+
+const Tooltip = styled(motion.div)`
+  position: absolute;
+  top: -40px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: ${props => props.theme.text};
+  color: ${props => props.theme.body};
+  padding: 5px 10px;
+  border-radius: 5px;
+  font-size: 0.8rem;
+  white-space: nowrap;
+  pointer-events: none;
+  z-index: 1000;
+`;
+
+const SocialMedia = ({ theme }) => {
+  const [hoveredIcon, setHoveredIcon] = useState(null);
+
   return (
-    <div className="social-media-div">
-      {socialMediaLinks.map((media) => {
+    <SocialMediaContainer layout>
+      {socialMediaLinks.map((media, index) => {
+        const IconComponent = media.icon;
+        const isHovered = hoveredIcon === media.name;
+
         return (
-          <a
+          <SocialMediaLink
+            key={media.name}
             href={media.link}
-            className={`icon-button`}
             target="_blank"
             rel="noopener noreferrer"
+            backgroundColor={media.backgroundColor}
+            onMouseEnter={() => setHoveredIcon(media.name)}
+            onMouseLeave={() => setHoveredIcon(null)}
+            animate={{
+              scale: isHovered ? 1.2 : 1,
+              marginLeft: isHovered ? '10px' : '5px',
+              marginRight: isHovered ? '10px' : '5px',
+            }}
+            layout
+            transition={{
+              type: "spring",
+              stiffness: 500,
+              damping: 15,
+              mass: 0.1,
+            }}
           >
-            <IconWrapper {...media} {...props}>
-              <i className={`fab ${media.fontAwesomeIcon}`}></i>
-            </IconWrapper>
-            {/* <span></span> */}
-          </a>
+            <IconComponent />
+            {isHovered && (
+              <Tooltip
+                initial={{ opacity: 0, y: 5 }}
+                animate={{ opacity: 1, y: 0 }}
+                exit={{ opacity: 0, y: 5 }}
+                transition={{ duration: 0.1 }}
+                theme={theme}
+              >
+                {media.tooltipContent}
+              </Tooltip>
+            )}
+          </SocialMediaLink>
         );
       })}
-    </div>
+    </SocialMediaContainer>
   );
-}
+};
+
+export default SocialMedia;

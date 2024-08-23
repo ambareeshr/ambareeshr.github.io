@@ -21,11 +21,17 @@ class Header extends Component {
           <span className="navicon"></span>
         </label>
         <ul className="menu">
-          <li>
+          {/*<li>
             <a href="#skills" style = {{ color: theme.text }}>Skills</a>
-          </li>
+          </li>*/}
           <li>
             <a href="#education" style = {{ color: theme.text }}>Education</a>
+          </li>
+          <li>
+            <a href="#experience" style = {{ color: theme.text }}>Experience</a>
+          </li>
+          <li>
+            <a href="#publications" style = {{ color: theme.text }}>Publications</a>
           </li>
           <li>
             <a href="#contact" style = {{ color: theme.text }}>Contact Me</a>

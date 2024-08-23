@@ -1,241 +1,320 @@
-/* Change this file to get your personal Porfolio */
+// myData.js
+import { FaGithub, FaLinkedinIn, FaEnvelope, FaFileAlt } from 'react-icons/fa';
 
-//Home Page
-const greeting = {
-  title: "Ambareesh R",
+
+export const greeting = {
+  title: "Ambareesh Ramakrishnan",
   logo_name: "Ambareesh",
   subTitle:
-    "An Aspiring Deep Learning practitioner who is passionate about building scalable and robust AI enabled applications . With strong technical skills and academic background in engineering, statistics, machine learning and full stack development.",
+  "Senior Software Engineer passionate about building AI-powered applications and scalable systems. Experienced in full-stack development, machine learning, and data engineering. Always eager to tackle complex challenges and drive innovation in tech.",
 };
 
-const socialMediaLinks = [
+export const socialMediaLinks = [
   {
     name: "Github",
     link: "https://github.com/ambareeshr",
-    fontAwesomeIcon: "fa-github", // Reference https://fontawesome.com/icons/github?style=brands
-    backgroundColor: "#181717", // Reference https://simpleicons.org/?q=github
+    icon: FaGithub,
+    backgroundColor: "#181717",
+    tooltipContent: "Explore my code repositories",
   },
   {
     name: "LinkedIn",
     link: "https://www.linkedin.com/in/ambareesh-r",
-    fontAwesomeIcon: "fa-linkedin-in", // Reference https://fontawesome.com/icons/linkedin-in?style=brands
-    backgroundColor: "#0077B5", // Reference https://simpleicons.org/?q=linkedin
+    icon: FaLinkedinIn,
+    backgroundColor: "#0077B5",
+    tooltipContent: "Connect with me professionally",
   },
   {
     name: "Gmail",
-    link: "mailto:rambareeshceg@gmail.com",
-    fontAwesomeIcon: "fa-google", // Reference https://fontawesome.com/icons/google?style=brands
-    backgroundColor: "#D14836", // Reference https://simpleicons.org/?q=gmail
-  }
+    link: "mailto:xxxx@gmail.com",
+    icon: FaEnvelope,
+    fontAwesomeIcon: "fa-google",
+    backgroundColor: "#D14836",
+    tooltipContent: "Drop me an email",
+  },
+  {
+    name: "Defensive Publications",
+    link: "https://www.tdcommons.org/do/search/?q=Ambareesh&start=0&context=6488067&facet=",
+    icon: FaFileAlt,
+    backgroundColor: "#8B4513",
+    tooltipContent: "Check out my publications",
+  },
 ];
 
-const skills = {
+export const skills = {
   data: [
     {
       title: "AI & Data Science",
-      fileName: "DataScienceImg",
       skills: [
-        "⚡ Developing highly scalable production ready models for various machine learning and statistical use cases",
-        "⚡ Worked in many Computer Vision and Natural Language Processing projects",
-        "⚡ Experienced in Deep Learning frameworks such as Tensorflow and Pytorch.",
+        "⚡ Developing highly scalable production-ready models for various machine learning and statistical use cases",
+        "⚡ Worked on many Computer Vision and Natural Language Processing projects",
+        "⚡ Experienced in Deep Learning frameworks such as TensorFlow and PyTorch",
       ],
       softwareSkills: [
-        {
-          skillName: "Tensorflow",
-          logoName: "logos-tensorflow",
-          style: {
-            backgroundColor: "transparent",
-          },
-        },
-        {
-          skillName: "Keras",
-          logoName: "simple-icons:keras",
-          style: {
-            backgroundColor: "white",
-            color: "#D00000",
-          },
-        },
-        {
-          skillName: "PyTorch",
-          logoName: "logos-pytorch",
-          style: {
-            backgroundColor: "transparent",
-          },
-        },
-        {
-          skillName: "Python",
-          logoName: "ion-logo-python",
-          style: {
-            backgroundColor: "transparent",
-            color: "#3776AB",
-          },
-        },
+        { skillName: "TensorFlow", logoName: "logos-tensorflow" },
+        { skillName: "Keras", logoName: "simple-icons:keras" },
+        { skillName: "PyTorch", logoName: "logos-pytorch" },
+        { skillName: "Python", logoName: "ion-logo-python" },
       ],
     },
     {
       title: "Full Stack Development",
-      fileName: "FullStackImg",
       skills: [
-        "⚡ Building responsive website UI using Angular",
-        "⚡ Creating application backend in Flask, .Net & Java",
-        "⚡ Worked in relational databases such as SQL, MySQL and non-relational databases such as MongoDB, Redis"
+        "⚡ Building responsive website UIs using Angular and React",
+        "⚡ Creating application backends in Flask, .NET & Java",
+        "⚡ Working with relational databases such as SQL, MySQL and non-relational databases such as MongoDB, Redis",
       ],
       softwareSkills: [
-        {
-          skillName: "HTML5",
-          logoName: "simple-icons:html5",
-          style: {
-            color: "#E34F26",
-          },
-        },
-        {
-          skillName: "CSS3",
-          logoName: "fa-css3",
-          style: {
-            color: "#1572B6",
-          },
-        },
-        {
-          skillName: "Sass",
-          logoName: "simple-icons:sass",
-          style: {
-            color: "#CC6699",
-          },
-        },
-        {
-          skillName: "JavaScript",
-          logoName: "simple-icons:javascript",
-          style: {
-            backgroundColor: "#000000",
-            color: "#F7DF1E",
-          },
-        },
-        {
-          skillName: "Angular",
-          logoName: "logos:angular-icon",
-          style: {
-            color: "#2C8EBB",
-          },
-        },
-        {
-          skillName: "ReactJS",
-          logoName: "simple-icons:react",
-          style: {
-            color: "#61DAFB",
-          },
-        },
-        {
-          skillName: "NodeJS",
-          logoName: "simple-icons:node-dot-js",
-          style: {
-            color: "#339933",
-          },
-        },
-        {
-          skillName: "NPM",
-          logoName: "simple-icons:npm",
-          style: {
-            color: "#CB3837",
-          },
-        },
-        {
-          skillName: "Flask",
-          logoName: "logos:flask",
-          style: {
-            color: "#663399",
-          },
-        },
-        {
-          skillName: "Flutter",
-          logoName: "simple-icons:flutter",
-          style: {
-            color: "#02569B",
-          },
-        },
+        { skillName: "HTML5", logoName: "simple-icons:html5" },
+        { skillName: "CSS3", logoName: "fa-css3" },
+        { skillName: "JavaScript", logoName: "simple-icons:javascript" },
+        { skillName: "Angular", logoName: "logos:angular-icon" },
+        { skillName: "ReactJS", logoName: "simple-icons:react" },
+        { skillName: "NodeJS", logoName: "simple-icons:node-dot-js" },
+        { skillName: "Flask", logoName: "logos:flask" },
+        { skillName: ".NET", logoName: "simple-icons:dot-net" },
       ],
     },
     {
       title: "Cloud Infra-Architecture",
-      fileName: "CloudInfraImg",
       skills: [
         "⚡ Experience working on multiple cloud platforms",
-        "⚡ Created Continous Integration/Continous Deployment (CI/CD) pipelines for many projects.",
+        "⚡ Created Continuous Integration/Continuous Deployment (CI/CD) pipelines for many projects",
         "⚡ Deploying deep learning models on cloud to use on mobile devices",
       ],
       softwareSkills: [
-        {
-          skillName: "AWS",
-          logoName: "simple-icons:amazonaws",
-          style: {
-            color: "#FF9900",
-          },
-        },
-        {
-          skillName: "Azure",
-          logoName: "simple-icons:microsoftazure",
-          style: {
-            color: "#0089D6",
-          },
-        },
-        {
-          skillName: "Firebase",
-          logoName: "simple-icons:firebase",
-          style: {
-            color: "#FFCA28",
-          },
-        },
-        {
-          skillName: "MySQL",
-          logoName: "logos:mysql",
-          style: {
-            color: "#336791",
-          },
-        },
-        {
-          skillName: "MongoDB",
-          logoName: "simple-icons:mongodb",
-          style: {
-            color: "#47A248",
-          },
-        },
-        {
-          skillName: "Docker",
-          logoName: "simple-icons:docker",
-          style: {
-            color: "#1488C6",
-          },
-        },
-        {
-          skillName: "Kubernetes",
-          logoName: "simple-icons:kubernetes",
-          style: {
-            color: "#326CE5",
-          },
-        },
+        { skillName: "AWS", logoName: "simple-icons:amazonaws" },
+        { skillName: "Azure", logoName: "simple-icons:microsoftazure" },
+        { skillName: "Docker", logoName: "simple-icons:docker" },
+        { skillName: "Kubernetes", logoName: "simple-icons:kubernetes" },
       ],
     },
   ],
 };
 
-
-const degrees = {
+export const degrees = {
   degrees: [
     {
+      title: "Oregon State University",
+      subtitle: "Master of Science in Computer Science",
+      logo_path: "osu_logo.jpg",
+      alt_name: "OSU",
+      duration: "Sep 2023 - Present",
+      location: "Corvallis, Oregon, USA",
+      cgpa: "4/4",
+      descriptions: [
+        "⚡ Developing AI Cortex, an OpenAI-funded project leveraging GPT-3.5 Turbo to optimize CI/CD workflows in GitHub Actions through interactive visualization and inefficiency resolution.",
+        "⚡ Designed '<a href='https://www.figma.com/proto/P3T4RYPQaq9H3GsSKLkdfi/Lullabyte?node-id=2095-3591&t=LJYRBQcsxcadq9Ju-1'>Lullabyte</a>', a sleep-tracking figma prototype with HCI principles and inclusive design. Conducted UX research including user journey mapping and heuristic evaluations.",
+        `⚡ <a href= ${process.env.PUBLIC_URL + '/pdfs/Deep_Unlearning.pdf'} target='_blank'>Deep Unlearning</a> - Conducted research on deep unlearning techniques across diverse neural network architectures, focusing on model forgetfulness while maintaining accuracy for privacy-compliant AI systems. This introduces a novel comparison method for unlearning algorithms.`,
+        `⚡ <a href=${process.env.PUBLIC_URL + '/pdfs/Final_Report.pdf'} target='_blank'>Automatic Code Documentation with Transformers</a> - Developed an innovative hybrid architecture combining language-trained encoder and decoder for code summarization, showing potential for enhanced documentation with larger datasets and further fine-tuning.`
+      ],
+      website_link: "https://oregonstate.edu/",
+    },
+    {
       title: "Anna University, College of Engineering Guindy",
-      subtitle: "B.Tech. in Information Technology",
+      subtitle: "Bachelor of Technology in Information Technology",
       logo_path: "annaUnivLogo.png",
       alt_name: "Anna University, CEG",
-      duration: "2015 - 2019",
+      duration: "Aug 2015 - Apr 2019",
+      location: "Chennai, India",
+      cgpa: "8.4/10",
       descriptions: [
-        "⚡ Courses Taken : Data Structures, Algorithms, DBMS, OS, CA, AI etc.",
-        "⚡ Apart from this, I have done courses on Deep Learning, Data Science and Full Stack Development.",
+        "⚡ Courses Taken: Data Analytics, Algorithms, DBMS, OS, AI, Parallel and Distributed Systems, etc.",
+        "⚡ Developed accessible tech products for children with disabilities, including a redesigned website for the Spastic Society of India featuring large button keyboards and voice commands. Created text-to-audio conversion software for visually impaired children, marking first hands-on experience with AI.",
+        "⚡ Runner-up in Microsoft's Hackathon 2017, developing an emotion detection application using Azure, selected as one of top three projects at university's innovation exhibition.",
+        "⚡ Completed Bachelor's Thesis on 'Rumor stance classification and determining the veracity of the rumors using Deep Learning and Knowledge Graphs', achieving 87% accuracy and ranking first in SemEval's RumorEval contest 2019 and selected as the best project for 2019 by the university.",
       ],
       website_link: "https://www.annauniv.edu/",
     },
   ],
 };
 
-const certifications = {
+
+export const experience = [
+  {
+    company: "Visa Inc.",
+    role: "Senior Software Engineer",
+    duration: "June 2019 - Aug 2023",
+    location: "Bangalore, India",
+    logo_path: "visa_transparent.png",
+    oneLineDescription:"Managed 10+ applications, streamlining processes and optimizing DevOps workflows by 20%. Conducted security assessments, resolving 35+ critical vulnerabilities.",
+    projects: [
+      /*
+      {
+        title: "CodeGenie",
+        description: "Led the development of a coding assistant powered by OpenAI Codex. Designed to recommend or auto-complete code based on existing repository structures, with a RAG mechanism to ensure compliance with organizational coding standards.",
+        technologies: ["Python", "OpenAI API", "NLP", "RAG"],
+        categories: ["AI", "Developer Tools"],
+        impact: "Enhanced developer productivity by 35% and reduced code review time by 25%"
+      },
+      */
+      {
+        title: "Data Governance Platform",
+        description: "Architected, designed, and led a team of 5 in developing the Data Governance Platform, enabling real-time data analytics, automated data validation, and end-to-end data lineage.",
+        technologies: ["Java", "Angular", "MongoDB", "Data Analytics"],
+        categories: ["Data Engineering", "Full Stack"],
+        impact: "Increased data accuracy by 30% across Visa products"
+      },
+      {
+        title: "Smart Recommender System",
+        description: "Developed a Smart Recommender using NLP and Azure OpenAI, improving candidate selection efficiency.",
+        technologies: ["NLP", "Azure OpenAI", "Machine Learning"],
+        categories: ["AI", "Data Engineering"],
+        impact: "Improved candidate selection efficiency by 60%, generating AI-crafted explanations for suitability"
+      },
+      {
+        title: "Enterprise Data Archival and Retrieval System (EDARS)",
+        description: "Implemented an Enterprise Data Archival and Retrieval platform using Angular, Kotlin, and MongoDB.",
+        technologies: ["Angular", "Kotlin", "MongoDB"],
+        categories: ["Full Stack", "Data Engineering"],
+        impact: "Saved Visa $250,000 annually in license costs"
+      },
+      {
+        title: "Visa Web Application Framework",
+        description: "Key contributor to the Visa Web Application Framework, which expedited the development time of new apps. Developed modules for authentication, caching, encryption, scaffolding, DevOps, and various UI components.",
+        technologies: ["Angular", "DevOps", "Authentication", "Caching"],
+        categories: ["Full Stack", "Developer Tools"],
+        impact: "Cut development time by 70% with many scaffolded components"
+      },
+      {
+        title: "Employee Referral Tool",
+        description: "Key contributor to the Employee Referral Tool leveraging NLP, automating the referral process.",
+        technologies: ["NLP", "Machine Learning", "Angular"],
+        categories: ["AI", "Full Stack"],
+        impact: "Automated 90% of the referral process, reducing processing time by 50%"
+      },
+      {
+        title: "Integration Hub",
+        description: "Developed a scalable BizTalk application to automate client processes. Built a centralized logging platform and an automated token authorization workflow for onboarding.",
+        technologies: ["BizTalk", "C#", ".NET", "Automation"],
+        categories: ["Integration", "Full Stack"],
+        impact: "Optimized throughput by 40%"
+      },
+      {
+        title: "Cube Performance Optimization",
+        description: "Achieved a significant increase in the performance of the dashboard in PowerBI by optimizing OLAP cubes.",
+        technologies: ["PowerBI", "OLAP", "Data Optimization"],
+        categories: ["Data Engineering", "Performance Optimization"],
+        impact: "Reduced loading time from 2 minutes to 20 seconds, a 150% performance increase"
+      },
+      {
+        title: "Test Automation Tool",
+        description: "Created a .NET-based test suite for writing, running, and scheduling test cases with interactive analytics dashboards.",
+        technologies: [".NET", "C#", "Test Automation", "Analytics"],
+        categories: ["QA & Testing", "Developer Tools"],
+        impact: "Ensured tool adoption with internal teams like Visa Activity Monitoring"
+      }
+      /*,
+      {
+        title: "Application Management and Optimization",
+        description: "Managed 10+ applications, streamlining processes and optimizing DevOps workflows. Conducted security assessments, resolving critical vulnerabilities.",
+        technologies: ["DevOps", "Security", "Application Management"],
+        categories: ["DevOps", "Security"],
+        impact: "Optimized DevOps workflows by 20%, resolved 35+ critical vulnerabilities"
+      }
+        */
+    ]
+  }
+  /*,
+  {
+    company: "Sigaram Technologies",
+    role: "Software Development Intern",
+    duration: "April 2018 - June 2018",
+    location: "Chennai, India",
+    logo_path: "sigaram_logo_new.png",
+    projects: [
+      {
+        title: "Reporting and Data Analytics Module",
+        description: "Delivered a comprehensive Reporting and Data Analytics Module, focusing on insightful dashboards and KPIs.",
+        technologies: ["Data Analytics", "Dashboard Development", "KPI Tracking"],
+        categories: ["Data Engineering", "Business Intelligence"],
+        impact: "Drove a 25% increase in business decision efficiency and generated a new revenue stream, contributing to a 15% increase in annual revenue"
+      }
+    ]
+  }*/
+];
+
+
+export const projects = [
+  {
+    name: "CodeGenie",
+    description: "Repository-based Code Assistant powered by OpenAI Codex. Designed to recommend or auto-complete code based on existing repository structures.",
+    tags: ["AI", "NLP", "OpenAI"],
+  },
+  {
+    name: "Data Governance Platform",
+    description: "Architected and led development of a platform enabling real-time data analytics, automated data validation, and end-to-end data lineage.",
+    tags: ["Data Engineering", "Analytics", "Architecture"],
+  },
+  {
+    name: "Employee Referral Tool",
+    description: "Key contributor to an NLP-powered tool automating 90% of the referral process and reducing processing time by 50%.",
+    tags: ["NLP", "Process Automation"],
+  },
+  {
+    name: "Smart Recommender System",
+    description: "Developed using NLP and Azure OpenAI, improving candidate selection efficiency by 60% and generating AI-crafted explanations for suitability.",
+    tags: ["AI", "NLP", "Azure OpenAI"],
+  },
+  {
+    name: "Enterprise Data Archival and Retrieval System (EDARS)",
+    description: "Implemented using Angular, Kotlin, and MongoDB, saving Visa $250,000 annually in license costs.",
+    tags: ["Angular", "Kotlin", "MongoDB"],
+  },
+];
+
+export const publications = [
+  {
+    title: "Secure BNPL for B2B",
+    description: "Defensive Publication on a system and method for providing Secure BNPL for B2B using federated blockchain and Deep Learning.",
+    link: "https://www.tdcommons.org/dpubs_series/5677/",
+    coAuthors: ["Shruti Dahiya"]
+  },
+  {
+    title: "Distribution Channels for Merchants",
+    description: "Defensive Publication on Recommendation of Distribution Channels for Merchants using Machine Learning and VisaNet data.",
+    link: "https://www.tdcommons.org/dpubs_series/6071/",
+    coAuthors: ["Shruti Dahiya", "Swathykrishnan K Chandran"]
+  }
+];
+export const achievements = [
+  {
+    title: "Visa Above and Beyond Awards",
+    description: "Received multiple times for exceptional performance and leadership.",
+    image_path: "visa_award.png",
+  },
+  {
+    title: "Technical Innovation Awards",
+    description: "For implementing AI-powered Employee Referral, Automatic Anomaly Detection, and ideating Fleet price prediction.",
+    image_path: "innovation_award.png",
+  },
+  {
+    title: "Publications",
+    description: "Co-authored Defensive Publications on 'System and method for providing Secure BNPL for B2B' and 'Recommendation of Distribution Channels for Merchants'.",
+    image_path: "publication.png",
+  },
+  // Add more achievements as needed
+];
+
+export const recommendations = [
+  {
+    name: "Raymond Taira",
+    position: "Sr. Director, Software Engineering at Visa",
+    text: "I enjoyed working closely with Ambareesh for several years, and I wholeheartedly recommend him for his exceptional skills and work ethic. As a Full Stack Developer, Ambareesh consistently impressed me with his ability to bridge the gap between frontend and backend development. He effortlessly created seamless user experiences while ensuring robust server-side functionality. His adaptability and innovative mindset were evident in every project he tackled. \n As a Data Developer and Engineer, Ambareesh excelled in complex data integrations and infrastructure management. He consistently delivered high-quality work, whether writing elegant code, designing efficient solutions, or collaborating with cross-functional teams. His passion for technology and commitment to excellence set him apart. \n In summary, Ambareesh is an outstanding professional who combines technical prowess with a strong work ethic. He's not just an asset to any team—he's a driving force behind success.",
+    date: "August 5, 2024",
+    company_name: "Visa Inc."
+  },
+  {
+    name: "Shruti Dahiya",
+    position: "Systems Architect",
+    text: "He is a key member of our HRIT. He joined our team a year back as an NCG and since then we are amazed how easily he picks up new things. He is meticulous in his work and provides quality output. He has come up with several innovative ideas in the project. Along with Project work, he has developed POC for Chatbot, NLP ner, etc. Within 1 year he has learned Dotnet, Angular, Docker, Kubernetes, BizTalk Server, SQL, Machine Learning, Deep Learning, etc.",
+    date: "May 20, 2021",
+    company_name: "Visa Inc."
+  },
+  // Add more recommendations if available
+];
+
+export const certifications = {
   certifications: [
     {
       title: "Deep Learning Nanodegree",
@@ -267,36 +346,18 @@ const certifications = {
   ],
 };
 
-
-// Contact Page
-const contactPageData = {
+export const contactPageData = {
   contactSection: {
-    title: "Contact Me",
-    profile_image_path: "android-chrome-512x512.png",
-    description:
-      "Want to discuss about any project or just wanna say Hi?",
+    title: "Connect with me?",
+    profile_image_path: "ambareesh_profile.png",
+    description: "Want to discuss about any project, work opportunities or just wanna say Hi?",
   },
   addressSection: {
     title: "Address",
-    subtitle:
-      "Sai Dharshan Apts, South Gangaiamman koil 2nd Street, Choolaimedu, Chennai-600094 ",
-    avatar_image_path: "address_image.svg",
-    location_map_link: "https://goo.gl/maps/N34TVpwA3pzqrArw8",
+    subtitle: "Corvallis, Oregon, USA",
   },
   phoneSection: {
     title: "Phone Number",
-    subtitle: "+91 9791141626",
+    subtitle: "+1 XXX-XXX-XXXX",
   },
-};
-
-
-
-
-export {
-  greeting,
-  socialMediaLinks,
-  skills,
-  degrees,
-  certifications,
-  contactPageData
 };
