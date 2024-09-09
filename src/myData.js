@@ -311,7 +311,20 @@ export const recommendations = [
     date: "May 20, 2021",
     company_name: "Visa Inc."
   },
-  // Add more recommendations if available
+  {
+    name: "Pankaj Shende",
+    position: "System Architecture Engineering Lead",
+    text: "I had the privilege of working with Ambareesh on a data governance project where we collaborated on data validation and cataloging tasks. Ambareesh's expertise in AI and machine learning was truly phenomenal, and his contributions significantly enhanced the quality of our work. His in-depth knowledge and problem-solving abilities were instrumental in the success of the project. I highly recommend Ambareesh for his dedication, technical skills, and his ability to deliver impactful results",
+    date: "September 4, 2024",
+    company_name: "Visa Inc."
+  },
+  {
+    name: "Yogesh T S",
+    position: "Sr SWE @Visa",
+    text: "I had the pleasure of working closely with Ambareesh during our time at Visa. He possesses a remarkable ability to quickly grasp new technologies and has a deep, comprehensive understanding of full-stack development. What stands out most about Ambareesh is his quick thinking and his talent for developing POCs that address complex problem statements. His ability to consistently provide insightful answers to any question makes him an invaluable asset to any team he is a part of.",
+    date: "August 31, 2024",
+    company_name: "Visa Inc."
+  }
 ];
 
 export const certifications = {

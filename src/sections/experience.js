@@ -102,8 +102,20 @@ const FilterBadge = styled.button`
 
 const ProjectsGrid = styled(motion.div)`
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  grid-template-columns: repeat(4, 1fr);
   gap: 2rem;
+
+  @media (max-width: 1200px) {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  @media (max-width: 900px) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @media (max-width: 600px) {
+    grid-template-columns: 1fr;
+  }
 `;
 
 const ProjectCard = styled(motion.div)`
@@ -198,6 +210,11 @@ const RecommendationCard = styled(motion.div)`
   display: flex;
   flex-direction: column;
   overflow: hidden;
+  grid-column: span 2;
+  
+  @media (max-width: 900px) {
+    grid-column: span 1;
+  }
 `;
 
 const RecommendationHeader = styled.div`
