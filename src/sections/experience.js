@@ -14,7 +14,7 @@ const ExperienceSection = styled.div`
 const SectionTitle = styled.h2`
   font-size: 32px;
   color: ${props => props.theme.text};
-  margin-bottom: 40px;
+  margin-bottom: 0px;
   text-align: center;
   font-weight: 700;
 `;

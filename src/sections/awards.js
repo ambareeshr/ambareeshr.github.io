@@ -1,7 +1,7 @@
 import React from "react";
 import styled from 'styled-components';
 import { motion } from "framer-motion";
-import { FaTrophy, FaScroll } from 'react-icons/fa';
+import { FaTrophy } from 'react-icons/fa';
 import { achievements } from "../myData";
 
 const Section = styled.div`
@@ -26,7 +26,7 @@ const CardContainer = styled.div`
 `;
 
 const Card = styled(motion.div)`
-  background-color: ${props => props.theme.secondaryBackground};
+  background-color: #ffffff;
   border-radius: 12px;
   padding: 30px;
   box-shadow: 0 10px 20px rgba(0,0,0,0.1);

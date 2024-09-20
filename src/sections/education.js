@@ -26,10 +26,11 @@ const EducationContainer = styled.div`
 `;
 
 const EducationCard = styled(motion.div)`
-  background-color: ${props => props.theme.secondaryBackground};
+  background-color: #ffffff;
   border-radius: 12px;
   padding: 20px;
   width: calc(50% - 20px);
+  font-size: 14px;
   box-shadow: 0 10px 20px rgba(0,0,0,0.1);
   display: flex;
   flex-direction: column;

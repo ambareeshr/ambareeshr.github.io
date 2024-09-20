@@ -6,6 +6,7 @@ import { publications } from "../myData";
 
 
 const Section = styled.div`
+  padding: 60px 20px;
   background-color: ${props => props.theme.body};
 `;
 
@@ -27,6 +28,7 @@ const CardContainer = styled.div`
 
 const Card = styled(motion.div)`
   background-color: ${props => props.theme.secondaryBackground};
+  background-color: #ffffff;
   border-radius: 12px;
   padding: 30px;
   box-shadow: 0 10px 20px rgba(0,0,0,0.1);

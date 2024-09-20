@@ -31,7 +31,7 @@ class Header extends Component {
             <a href="#experience" style = {{ color: theme.text }}>Experience</a>
           </li>
           <li>
-            <a href="#publications" style = {{ color: theme.text }}>Publications</a>
+            <a href="#patents" style = {{ color: theme.text }}>Patents</a>
           </li>
           <li>
             <a href="#contact" style = {{ color: theme.text }}>Contact Me</a>

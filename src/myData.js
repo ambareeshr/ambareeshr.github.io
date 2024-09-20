@@ -103,10 +103,10 @@ export const degrees = {
       location: "Corvallis, Oregon, USA",
       cgpa: "4/4",
       descriptions: [
-        "⚡ Developing AI Cortex, an OpenAI-funded project leveraging GPT-3.5 Turbo to optimize CI/CD workflows in GitHub Actions through interactive visualization and inefficiency resolution.",
-        "⚡ Designed '<a href='https://www.figma.com/proto/P3T4RYPQaq9H3GsSKLkdfi/Lullabyte?node-id=2095-3591&t=LJYRBQcsxcadq9Ju-1'>Lullabyte</a>', a sleep-tracking figma prototype with HCI principles and inclusive design. Conducted UX research including user journey mapping and heuristic evaluations.",
-        `⚡ <a href= ${process.env.PUBLIC_URL + '/pdfs/Deep_Unlearning.pdf'} target='_blank'>Deep Unlearning</a> - Conducted research on deep unlearning techniques across diverse neural network architectures, focusing on model forgetfulness while maintaining accuracy for privacy-compliant AI systems. This introduces a novel comparison method for unlearning algorithms.`,
-        `⚡ <a href=${process.env.PUBLIC_URL + '/pdfs/Final_Report.pdf'} target='_blank'>Automatic Code Documentation with Transformers</a> - Developed an innovative hybrid architecture combining language-trained encoder and decoder for code summarization, showing potential for enhanced documentation with larger datasets and further fine-tuning.`
+        "⚡ Developing <b>AI Cortex</b>, an OpenAI-funded project leveraging GPT-3.5 Turbo to optimize CI/CD workflows in GitHub Actions through interactive visualization and inefficiency resolution.",
+        "⚡ Designed <b><a href='https://www.figma.com/proto/P3T4RYPQaq9H3GsSKLkdfi/Lullabyte?node-id=2095-3591&t=LJYRBQcsxcadq9Ju-1'>Lullabyte</a></b>, a sleep-tracking figma prototype with HCI principles and inclusive design. Conducted UX research including user journey mapping and heuristic evaluations.",
+        `⚡ <b><a href= ${process.env.PUBLIC_URL + '/pdfs/Deep_Unlearning.pdf'} target='_blank'>Deep Unlearning</a></b> - Conducted research on deep unlearning techniques across diverse neural network architectures, focusing on model forgetfulness while maintaining accuracy for privacy-compliant AI systems. This introduces a novel comparison method for unlearning algorithms.`,
+        `⚡ <b><a href=${process.env.PUBLIC_URL + '/pdfs/Final_Report.pdf'} target='_blank'>Automatic Code Documentation with Transformers</a></b> - Developed an innovative hybrid architecture combining language-trained encoder and decoder for code summarization, showing potential for enhanced documentation with larger datasets and further fine-tuning.`
       ],
       website_link: "https://oregonstate.edu/",
     },
@@ -296,6 +296,25 @@ export const achievements = [
   // Add more achievements as needed
 ];
 
+
+export const patents = [
+  {
+    title: "Secure Authentication Using Software Application",
+    number: "PCT/US2023/075209",
+    status: "Filed",
+    date: "Dec 19, 2023",
+    description: "A novel approach to secure authentication in software applications, enhancing user security while maintaining a seamless user experience.",
+    coAuthors: ["Shruti Dahiya", "Swathykrishnan K Chandran"]
+  },
+  {
+    title: "Detection Of XSS Attacks Using Deep Learning Models",
+    number: "PCT/US2024/042106",
+    status: "Filed",
+    date: "Sep 17, 2024",
+    description: "An innovative method for detecting Cross-Site Scripting (XSS) attacks using advanced deep learning models, significantly improving web application security.",
+    coAuthors: ["Shruti Dahiya", "Swathykrishnan K Chandran"]  },
+];
+
 export const recommendations = [
   {
     name: "Raymond Taira",
@@ -327,37 +346,33 @@ export const recommendations = [
   }
 ];
 
-export const certifications = {
-  certifications: [
+export const certifications = [
     {
       title: "Deep Learning Nanodegree",
-      subtitle: "- Udacity",
-      logo_path: "aws_facebookai_logo.png",
-      certificate_link:
-        "https://confirm.udacity.com/KGNC4KFP",
-      alt_name: "Udacity",
-      color_code: "#02B3E4",
+      subtitle: "Udacity",
+      link: "https://confirm.udacity.com/KGNC4KFP"
+    },
+    {
+      title: "Data Engineering Nanodegree",
+      subtitle: "Udacity",
+      link: "https://www.udacity.com/certificate/H7XPZWMG"
+    },
+    {
+      title: "Natural Language Processing Specialization",
+      subtitle: "Coursera",
+      link: "https://www.coursera.org/account/accomplishments/specialization/certificate/H9DGBVUCTLRD"
     },
     {
       title: "Recommender Systems and Deep Learning in Python",
-      subtitle: "- Udemy",
-      logo_path: "udemy_logo.png",
-      certificate_link:
-        "https://ude.my/UC-2c264bae-b840-4b28-afb3-db1c58761357/",
-      alt_name: "Udemy",
-      color_code: "#0C9D5899",
+      subtitle: "Udemy",
+      link: "https://ude.my/UC-2c264bae-b840-4b28-afb3-db1c58761357/",
     },
     {
-      title: "Cluster Analysis and Unsupervised Machine Learning in Python",
-      subtitle: "- Udemy",
-      logo_path: "udemy_logo.png",
-      certificate_link:
-        "https://ude.my/UC-854cf59e-757d-4612-badf-cbf00117cb32",
-      alt_name: "Udemy",
-      color_code: "#0C9D5899",
+      title: "Cluster Analysis and Unsupervised ML in Python",
+      subtitle: "Udemy",
+      link: "https://ude.my/UC-854cf59e-757d-4612-badf-cbf00117cb32",
     }
-  ],
-};
+  ];
 
 export const contactPageData = {
   contactSection: {
