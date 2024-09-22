@@ -9,6 +9,8 @@ import "./index.css";
 import App from "./App";
 import * as serviceWorker from "./serviceWorker";
 import "./assests/font-awesome/css/all.css";
+import './responsive.css';
+
 
 const engine = new Styletron();
 

@@ -1,0 +1,150 @@
+/* Base styles */
+body {
+    overflow-x: hidden;
+  }
+  
+  /* Responsive container */
+  .container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    box-sizing: border-box;
+  }
+  
+  /* Responsive grid system */
+  .row {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -15px;
+  }
+  
+  .col {
+    flex: 1;
+    padding: 0 15px;
+    box-sizing: border-box;
+  }
+  
+  /* Responsive typography */
+  html {
+    font-size: 16px;
+  }
+  
+  @media (max-width: 768px) {
+    html {
+      font-size: 14px;
+    }
+  }
+  
+  /* Responsive images */
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+  
+  /* Responsive cards */
+  .card {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+  
+  /* Media queries for different screen sizes */
+  @media (max-width: 1200px) {
+    .container {
+      max-width: 960px;
+    }
+  }
+  
+  @media (max-width: 992px) {
+    .container {
+      max-width: 720px;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .container {
+      max-width: 540px;
+    }
+    
+    .col {
+      flex: 0 0 100%;
+      max-width: 100%;
+    }
+  }
+  
+  @media (max-width: 576px) {
+    .container {
+      max-width: 100%;
+    }
+  }
+  
+  /* Fix for horizontal scrolling */
+  .ExperienceSection, .EducationSection, .Section {
+    margin-left: 0;
+    margin-right: 0;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  /* Responsive grid for ProjectsGrid */
+  .EducationContainer {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1rem;
+  }
+  
+  
+  /* Responsive grid for ProjectsGrid */
+  .ProjectsGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1rem;
+  }
+  
+  /* Responsive styles for RecommendationCard */
+  .RecommendationCard {
+    grid-column: span 1;
+  }
+  
+  @media (min-width: 768px) {
+    .RecommendationCard {
+      grid-column: span 2;
+    }
+  }
+  
+  /* Responsive FilterContainer */
+  .FilterContainer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.5rem;
+  }
+  
+  /* Responsive FilterBadge */
+  .FilterBadge {
+    font-size: 0.8rem;
+    padding: 0.3rem 0.6rem;
+  }
+  
+  /* Responsive font sizes */
+  @media (max-width: 768px) {
+    .SectionTitle {
+      font-size: 24px;
+    }
+    
+    .CompanyName {
+      font-size: 20px;
+    }
+    
+    .JobTitle {
+      font-size: 18px;
+    }
+    
+    .ProjectTitle {
+      font-size: 1.2rem;
+    }
+    
+    .ProjectDescription {
+      font-size: 0.9rem;
+    }
+  }

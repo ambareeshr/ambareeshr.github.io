@@ -9,6 +9,12 @@ const ExperienceSection = styled.div`
   margin-left: 40px;
   margin-right: 40px;
   margin-top: 100px;
+  @media (max-width: 768px) {
+    margin-left: 0;
+    margin-right: 0;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
 `;
 
 const SectionTitle = styled.h2`

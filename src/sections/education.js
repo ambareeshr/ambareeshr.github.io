@@ -6,76 +6,92 @@ import { FaCalendarAlt, FaGraduationCap, FaMapMarkerAlt } from 'react-icons/fa';
 
 const EducationSection = styled.div`
   background-color: ${props => props.theme.body};
-  margin-left: 40px;
-  margin-right: 40px;
+  padding: 5% 5%;
+  display: grid;
 `;
 
 const SectionTitle = styled.h2`
-  font-size: 32px;
+  font-size: 2rem;
   color: ${props => props.theme.text};
-  margin-bottom: 40px;
+  margin-bottom: 1.5rem;
   text-align: center;
   font-weight: 700;
+
+  @media (max-width: 768px) {
+    font-size: 1.5rem;
+  }
 `;
 
 const EducationContainer = styled.div`
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  gap: 40px;
+  display: grid;
+  gap: 2rem;
+  overflow: hidden;
+  grid-template-columns: repeat(2, 1fr);
+  @media (max-width: 900px) {
+    grid-column: span 1;
+  }
+    @media (max-width: 900px) {
+    grid-template-columns: repeat(1, 1fr);
+  }
 `;
 
 const EducationCard = styled(motion.div)`
   background-color: #ffffff;
   border-radius: 12px;
-  padding: 20px;
-  width: calc(50% - 20px);
-  font-size: 14px;
+  padding: 1.5rem;
+  width: 100%;
   box-shadow: 0 10px 20px rgba(0,0,0,0.1);
   display: flex;
   flex-direction: column;
 `;
 
 const Logo = styled.img`
-  width: 80px;
-  height: 80px;
+  width: 60px;
+  height: 60px;
   object-fit: contain;
-  margin-bottom: 15px;
+  margin-bottom: 1rem;
   align-self: center;
 `;
 
 const DegreeTitle = styled.h3`
-  font-size: 20px;
+  font-size: 1.2rem;
   color: ${props => props.theme.primary};
-  margin-bottom: 5px;
+  margin-bottom: 0.5rem;
   text-align: center;
   font-weight: 600;
+
+  @media (max-width: 768px) {
+    font-size: 1rem;
+  }
 `;
 
 const DegreeSubtitle = styled.p`
-  font-size: 16px;
+  font-size: 1rem;
   color: ${props => props.theme.secondaryText};
-  margin-bottom: 10px;
+  margin-bottom: 0.5rem;
   text-align: center;
 `;
 
 const InfoContainer = styled.div`
   display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-bottom: 15px;
   flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
 `;
 
 const InfoItem = styled.div`
   display: flex;
   align-items: center;
-  margin: 5px 10px;
   color: ${props => props.theme.secondaryText};
-  font-size: 14px;
+  font-size: 0.9rem;
 
   svg {
-    margin-right: 5px;
+    margin-right: 0.3rem;
+  }
+
+  @media (max-width: 768px) {
+    font-size: 0.8rem;
   }
 `;
 
@@ -86,22 +102,22 @@ const SubpointsList = styled.ul`
 `;
 
 const Subpoint = styled.li`
-  font-size: 14px;
+  font-size: 0.9rem;
   color: ${props => props.theme.text};
-  margin-bottom: 10px;
+  margin-bottom: 0.8rem;
   display: flex;
   align-items: flex-start;
   text-align: left;
 
   &:before {
-    content: "";
-    display: inline-block;
-    min-width: 8px;
-    height: 8px;
-    background-color: ${props => props.theme.primary};
-    border-radius: 50%;
-    margin-right: 10px;
-    margin-top: 5px;
+    content: "•";
+    color: ${props => props.theme.primary};
+    font-weight: bold;
+    margin-right: 0.5rem;
+  }
+
+  @media (max-width: 768px) {
+    font-size: 0.8rem;
   }
 `;
 
@@ -112,7 +128,7 @@ const SubpointContent = styled.span`
 const SubpointLink = styled.a`
   color: ${props => props.theme.primary};
   text-decoration: none;
-  white-space: nowrap;
+  word-break: break-word;
 
   &:hover {
     text-decoration: underline;
