@@ -11,15 +11,12 @@ const EducationSection = styled.div`
 `;
 
 const SectionTitle = styled.h2`
-  font-size: 2rem;
+  font-size: 32px;
   color: ${props => props.theme.text};
   margin-bottom: 1.5rem;
   text-align: center;
   font-weight: 700;
 
-  @media (max-width: 768px) {
-    font-size: 1.5rem;
-  }
 `;
 
 const EducationContainer = styled.div`
@@ -102,7 +99,7 @@ const SubpointsList = styled.ul`
 `;
 
 const Subpoint = styled.li`
-  font-size: 0.9rem;
+  font-size: 0.98rem;
   color: ${props => props.theme.text};
   margin-bottom: 0.8rem;
   display: flex;
@@ -117,7 +114,7 @@ const Subpoint = styled.li`
   }
 
   @media (max-width: 768px) {
-    font-size: 0.8rem;
+    font-size: 0.9rem;
   }
 `;
 

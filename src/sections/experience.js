@@ -8,7 +8,7 @@ const ExperienceSection = styled.div`
   background-color: ${props => props.theme.body};
   margin-left: 40px;
   margin-right: 40px;
-  margin-top: 100px;
+  margin-top: 50px;
   @media (max-width: 768px) {
     margin-left: 0;
     margin-right: 0;
