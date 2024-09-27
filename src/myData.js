@@ -26,7 +26,7 @@ export const socialMediaLinks = [
   },
   {
     name: "Gmail",
-    link: "mailto:xxxx@gmail.com",
+    link: "mailto:rambareeshceg@gmail.com",
     icon: FaEnvelope,
     fontAwesomeIcon: "fa-google",
     backgroundColor: "#D14836",
