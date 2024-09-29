@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import styled from 'styled-components';
-import { motion } from 'framer-motion';
+import { motion, AnimatePresence } from 'framer-motion';
 import { socialMediaLinks } from "../../myData";
 
 const SocialMediaContainer = styled(motion.div)`
@@ -12,6 +12,21 @@ const SocialMediaContainer = styled(motion.div)`
   background: rgba(255, 255, 255, 0.1);
   border-radius: 30px;
   backdrop-filter: blur(10px);
+
+  @media (max-width: 768px) {
+    flex-wrap: wrap;
+  }
+`;
+
+const SocialMediaItem = styled(motion.div)`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 5px;
+
+  @media (max-width: 768px) {
+    margin: 5px;
+  }
 `;
 
 const SocialMediaLink = styled(motion.a)`
@@ -26,7 +41,10 @@ const SocialMediaLink = styled(motion.a)`
   font-size: 1.2rem;
   text-decoration: none;
   position: relative;
-  margin: 0 5px;
+  @media (max-width: 768px) {
+    width: 40px;
+    height: 40px;
+  }
 `;
 
 const Tooltip = styled(motion.div)`
@@ -44,6 +62,18 @@ const Tooltip = styled(motion.div)`
   z-index: 1000;
 `;
 
+const Label = styled(motion.span)`
+  display: none;
+  font-size: 0.8rem;
+  margin-top: 5px;
+  text-align: center;
+  color: ${props => props.theme.text};
+
+  @media (max-width: 768px) {
+    display: block;
+  }
+`;
+
 const SocialMedia = ({ theme }) => {
   const [hoveredIcon, setHoveredIcon] = useState(null);
 
@@ -54,40 +84,44 @@ const SocialMedia = ({ theme }) => {
         const isHovered = hoveredIcon === media.name;
 
         return (
-          <SocialMediaLink
+          <SocialMediaItem
             key={media.name}
-            href={media.link}
-            target="_blank"
-            rel="noopener noreferrer"
-            backgroundColor={media.backgroundColor}
-            onMouseEnter={() => setHoveredIcon(media.name)}
-            onMouseLeave={() => setHoveredIcon(null)}
-            animate={{
-              scale: isHovered ? 1.2 : 1,
-              marginLeft: isHovered ? '10px' : '5px',
-              marginRight: isHovered ? '10px' : '5px',
-            }}
             layout
-            transition={{
-              type: "spring",
-              stiffness: 500,
-              damping: 15,
-              mass: 0.1,
-            }}
           >
-            <IconComponent />
-            {isHovered && (
-              <Tooltip
-                initial={{ opacity: 0, y: 5 }}
-                animate={{ opacity: 1, y: 0 }}
-                exit={{ opacity: 0, y: 5 }}
-                transition={{ duration: 0.1 }}
-                theme={theme}
-              >
-                {media.tooltipContent}
-              </Tooltip>
-            )}
-          </SocialMediaLink>
+            <SocialMediaLink
+              href={media.link}
+              target="_blank"
+              rel="noopener noreferrer"
+              backgroundColor={media.backgroundColor}
+              onMouseEnter={() => setHoveredIcon(media.name)}
+              onMouseLeave={() => setHoveredIcon(null)}
+              animate={{
+                scale: isHovered ? 1.2 : 1,
+              }}
+              transition={{
+                type: "spring",
+                stiffness: 500,
+                damping: 15,
+                mass: 0.1,
+              }}
+            >
+              <IconComponent />
+              <AnimatePresence>
+                {isHovered && (
+                  <Tooltip
+                    initial={{ opacity: 0, y: 5 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    exit={{ opacity: 0, y: 5 }}
+                    transition={{ duration: 0.1 }}
+                    theme={theme}
+                  >
+                    {media.tooltipContent}
+                  </Tooltip>
+                )}
+              </AnimatePresence>
+            </SocialMediaLink>
+            <Label theme={theme}>{media.name}</Label>
+          </SocialMediaItem>
         );
       })}
     </SocialMediaContainer>

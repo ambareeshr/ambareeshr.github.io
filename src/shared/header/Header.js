@@ -21,20 +21,21 @@ class Header extends Component {
           <span className="navicon"></span>
         </label>
         <ul className="menu">
-          {/*<li>
-            <a href="#skills" style = {{ color: theme.text }}>Skills</a>
-          </li>*/}
-          <li>
-            <a href="#education" style = {{ color: theme.text }}>Education</a>
+          <li> 
+            
+            <a href="#skills" style = {{ color: theme.text, cursor: 'pointer' }}>Skills</a>
           </li>
           <li>
-            <a href="#experience" style = {{ color: theme.text }}>Experience</a>
+            <a href="#education" style = {{ color: theme.text, cursor: 'pointer' }}>Education</a>
           </li>
           <li>
-            <a href="#patents" style = {{ color: theme.text }}>Patents</a>
+            <a href="#experience" style = {{ color: theme.text, cursor: 'pointer' }}>Experience</a>
           </li>
           <li>
-            <a href="#contact" style = {{ color: theme.text }}>Contact Me</a>
+            <a href="#patents" style = {{ color: theme.text, cursor: 'pointer' }}>Patents</a>
+          </li>
+          <li>
+            <a href="#contact" style = {{ color: theme.text, cursor: 'pointer' }}>Contact Me</a>
           </li>
         </ul>
       </header>

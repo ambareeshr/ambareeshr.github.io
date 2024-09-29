@@ -10,6 +10,7 @@ import {Awards} from "./sections/awards";
 import Publications from "./sections/publications";
 import Certifications from "./sections/certifications";
 import Patents from "./sections/patents";
+import Skills from "./sections/skills";
 
 
 export default class Main extends Component {
@@ -19,6 +20,7 @@ export default class Main extends Component {
     return (
         <div>
             <Home theme={this.props.theme} />
+            <Skills theme={this.props.theme} /> 
             <Education theme={this.props.theme} />
             <Experience theme={this.props.theme} />
             <Patents theme={this.props.theme} />

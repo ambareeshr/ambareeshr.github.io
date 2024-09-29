@@ -1,9 +1,22 @@
 import React, { Component } from "react";
+import styled from 'styled-components';
 
-class FeelingProud extends Component {
-  render() {
-    const theme = this.props.theme;
-    return (
+const PulsingDot = styled.circle`
+  animation: pulse 2s infinite;
+
+  @keyframes pulse {
+    0% {
+      r: 0;
+      opacity: 1;
+    }
+    100% {
+      r: 20;
+      opacity: 0;
+    }
+  }
+`;
+const FeelingProud = ({ theme }) => {
+  return (
       <svg
         id="b52d7e2d-d80f-4111-b6ed-d15502ee1edd"
         data-name="Layer 1"
@@ -12,7 +25,7 @@ class FeelingProud extends Component {
         height="669.68268"
         viewBox="0 0 711.1879 669.68268"
       >
-        <title>feeling_proud</title>
+        <title>Click Me!</title>
         <polygon
           points="516.326 380.018 516.326 565.013 547.27 615.443 549.625 619.279 671.722 619.279 674.189 380.018 516.326 380.018"
           fill="#e6e6e6"
@@ -152,6 +165,9 @@ class FeelingProud extends Component {
           transform="translate(-244.40605 -115.15866)"
           fill={theme.dark}
         />
+        <g>
+          <PulsingDot cx="737" cy="563" r="10" fill={theme.text} />
+        </g>
         <path
           d="M406.54771,357.55418l-27.62727,51.80113s-40.28976,41.4409-17.267,46.04545,35.68522-37.9875,35.68522-37.9875l29.92955-42.592Z"
           transform="translate(-244.40605 -115.15866)"
@@ -347,8 +363,7 @@ class FeelingProud extends Component {
           />
         </g>
       </svg>
-    );
-  }
-}
+  );
+};
 
 export default FeelingProud;

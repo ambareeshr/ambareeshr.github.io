@@ -1,5 +1,5 @@
 // myData.js
-import { FaGithub, FaLinkedinIn, FaEnvelope, FaFileAlt } from 'react-icons/fa';
+import { FaGithub, FaLinkedinIn, FaEnvelope, FaFileAlt, FaBookOpen } from 'react-icons/fa';
 
 
 export const greeting = {
@@ -33,15 +33,22 @@ export const socialMediaLinks = [
     tooltipContent: "Drop me an email",
   },
   {
-    name: "Defensive Publications",
+    name: "Publications",
     link: "https://www.tdcommons.org/do/search/?q=Ambareesh&start=0&context=6488067&facet=",
-    icon: FaFileAlt,
+    icon: FaBookOpen,
     backgroundColor: "#8B4513",
     tooltipContent: "Check out my publications",
   },
+  {
+    name: "Resume",
+    link: "https://myjobartifacts.s3.amazonaws.com/SW+Resume.pdf",
+    icon: FaFileAlt,
+    backgroundColor: "#E4405F",
+    tooltipContent: "View my resume",
+  },
 ];
 
-export const skills = {
+export const old_skills = {
   data: [
     {
       title: "AI & Data Science",
@@ -92,6 +99,46 @@ export const skills = {
   ],
 };
 
+export const skills = [
+  {
+    category: "Languages & Frameworks",
+    items: ["Python", ".NET", "Angular", "Java", "JavaScript",, "C#", "React", "Node.js", "Spring Boot"]
+  },
+  {
+    category: "Databases & Big Data",
+    items: ["SQL", "MongoDB", "Redis", "Kafka", "Spark", "Snowflake"]
+  },
+  {
+    category: "Cloud & DevOps",
+    items: ["AWS", "Azure", "Docker", "Kubernetes", "CI/CD", "Git"]
+  },
+  {
+    category: "AI & Machine Learning",
+    items: ["TensorFlow", "PyTorch", "Scikit-learn", "NLP", "Computer Vision", "Deep Learning"]
+  }
+];
+
+export const proudAchievements = [
+  {
+    title: "Accessible Tech Products",
+    description: "Developed tech products for children with disabilities, including a redesigned website for the Spastic Society of India featuring large button keyboards and voice commands. Created text-to-audio conversion software for visually impaired children."
+  },
+  
+
+  {
+    title: "Data Governance Platform",
+    description: "Led a team of 5 to build a platform that increased data accuracy by 30% across Visa products, using cutting-edge technologies."
+  },
+  {
+    title: "NextGen Talent Portal",
+    description: "Created an AI-driven suite that automated 90% of referrals and improved candidate selection by 60% using Azure OpenAI."
+  },
+  {
+    title: "Cortex.ai for CI/CD Optimization",
+    description: "Developing an OpenAI-funded project to optimize CI/CD workflows using LLM agents and chain-of-thought reasoning."
+  }
+];
+
 export const degrees = {
   degrees: [
     {
@@ -107,6 +154,24 @@ export const degrees = {
         "⚡ Designed <b><a href='https://www.figma.com/proto/P3T4RYPQaq9H3GsSKLkdfi/Lullabyte?node-id=2095-3591&t=LJYRBQcsxcadq9Ju-1'>Lullabyte</a></b>, a sleep-tracking figma prototype with HCI principles and inclusive design. Conducted UX research including user journey mapping and heuristic evaluations.",
         `⚡ <b><a href= ${process.env.PUBLIC_URL + '/pdfs/Deep_Unlearning.pdf'} target='_blank'>Deep Unlearning</a></b> - Conducted research on deep unlearning techniques across diverse neural network architectures, focusing on model forgetfulness while maintaining accuracy for privacy-compliant AI systems. This introduces a novel comparison method for unlearning algorithms.`,
         `⚡ <b><a href=${process.env.PUBLIC_URL + '/pdfs/Final_Report.pdf'} target='_blank'>Automatic Code Documentation with Transformers</a></b> - Developed an innovative hybrid architecture combining language-trained encoder and decoder for code summarization, showing potential for enhanced documentation with larger datasets and further fine-tuning.`
+      ],
+      points: [
+        {
+          "title": "AI Cortex",
+          "content": "an OpenAI-funded project leveraging GPT-3.5 Turbo to optimize CI/CD workflows in GitHub Actions through interactive visualization and inefficiency resolution."
+        },
+        {
+          "title": "Lullabyte",
+          "content": "<b><a href='https://www.figma.com/proto/P3T4RYPQaq9H3GsSKLkdfi/Lullabyte?node-id=2095-3591&t=LJYRBQcsxcadq9Ju-1'>Lullabyte</a></b> - Sleep-tracking figma prototype with HCI principles and inclusive design. Conducted UX research including user journey mapping and heuristic evaluations."
+        },
+        {
+          "title": "Deep Unlearning",
+          "content": "<b><a href= ${process.env.PUBLIC_URL + '/pdfs/Deep_Unlearning.pdf'} target='_blank'>Deep Unlearning</a></b> - Conducted research on deep unlearning techniques across diverse neural network architectures, focusing on model forgetfulness while maintaining accuracy for privacy-compliant AI systems. This introduces a novel comparison method for unlearning algorithms."
+        },
+        {
+          "title": "Automatic Code Documentation",
+          "content": "<b><a href=${process.env.PUBLIC_URL + '/pdfs/Final_Report.pdf'} target='_blank'>Automatic Code Documentation with Transformers</a></b> - Developed an innovative hybrid architecture combining language-trained encoder and decoder for code summarization, showing potential for enhanced documentation with larger datasets and further fine-tuning."
+        }
       ],
       website_link: "https://oregonstate.edu/",
     },
@@ -124,6 +189,25 @@ export const degrees = {
         "⚡ Runner-up in Microsoft's Hackathon 2017, developing an emotion detection application using Azure, selected as one of top three projects at university's innovation exhibition.",
         "⚡ Completed Bachelor's Thesis on 'Rumor stance classification and determining the veracity of the rumors using Deep Learning and Knowledge Graphs', achieving 87% accuracy and ranking first in SemEval's RumorEval contest 2019 and selected as the best project for 2019 by the university.",
       ],
+      points: [
+        {
+          "title": "Coursework",
+          "content": "Courses Taken: Data Analytics, Algorithms, DBMS, OS, AI, Parallel and Distributed Systems, etc."
+        },
+        {
+          "title": "Accessible Tech Products",
+          "content": "Developed tech products for children with disabilities, including a redesigned website for the Spastic Society of India featuring large button keyboards and voice commands. Created text-to-audio conversion software for visually impaired children, marking first hands-on experience with AI."
+        },
+        {
+          "title": "Microsoft Hackathon 2017",
+          "content": "Runner-up in Microsoft's Hackathon 2017, developing an emotion detection application using Azure, selected as one of top three projects at university's innovation exhibition."
+        },
+        {
+          "title": "Bachelor's Thesis",
+          "content": "Completed Bachelor's Thesis on 'Rumor stance classification and determining the veracity of the rumors using Deep Learning and Knowledge Graphs', achieving 87% accuracy and ranking first in SemEval's RumorEval contest 2019 and selected as the best project for 2019 by the university."
+        }
+      ],
+
       website_link: "https://www.annauniv.edu/",
     },
   ],
