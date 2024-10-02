@@ -152,8 +152,8 @@ export const degrees = {
       descriptions: [
         "⚡ Developing <b>AI Cortex</b>, an OpenAI-funded project leveraging GPT-3.5 Turbo to optimize CI/CD workflows in GitHub Actions through interactive visualization and inefficiency resolution.",
         "⚡ Designed <b><a href='https://www.figma.com/proto/P3T4RYPQaq9H3GsSKLkdfi/Lullabyte?node-id=2095-3591&t=LJYRBQcsxcadq9Ju-1'>Lullabyte</a></b>, a sleep-tracking figma prototype with HCI principles and inclusive design. Conducted UX research including user journey mapping and heuristic evaluations.",
-        `⚡ <b><a href= ${process.env.PUBLIC_URL + '/pdfs/Deep_Unlearning.pdf'} target='_blank'>Deep Unlearning</a></b> - Conducted research on deep unlearning techniques across diverse neural network architectures, focusing on model forgetfulness while maintaining accuracy for privacy-compliant AI systems. This introduces a novel comparison method for unlearning algorithms.`,
-        `⚡ <b><a href=${process.env.PUBLIC_URL + '/pdfs/Final_Report.pdf'} target='_blank'>Automatic Code Documentation with Transformers</a></b> - Developed an innovative hybrid architecture combining language-trained encoder and decoder for code summarization, showing potential for enhanced documentation with larger datasets and further fine-tuning.`
+        `⚡ <b><a href= '/pdfs/Deep_Unlearning.pdf'} target='_blank'>Deep Unlearning</a></b> - Conducted research on deep unlearning techniques across diverse neural network architectures, focusing on model forgetfulness while maintaining accuracy for privacy-compliant AI systems. This introduces a novel comparison method for unlearning algorithms.`,
+        `⚡ <b><a href= '/pdfs/Final_Report.pdf'} target='_blank'>Automatic Code Documentation with Transformers</a></b> - Developed an innovative hybrid architecture combining language-trained encoder and decoder for code summarization, showing potential for enhanced documentation with larger datasets and further fine-tuning.`
       ],
       points: [
         {
@@ -166,11 +166,11 @@ export const degrees = {
         },
         {
           "title": "Deep Unlearning",
-          "content": "<b><a href= ${process.env.PUBLIC_URL + '/pdfs/Deep_Unlearning.pdf'} target='_blank'>Deep Unlearning</a></b> - Conducted research on deep unlearning techniques across diverse neural network architectures, focusing on model forgetfulness while maintaining accuracy for privacy-compliant AI systems. This introduces a novel comparison method for unlearning algorithms."
+          "content": "<b><a href= '/pdfs/Deep_Unlearning.pdf'} target='_blank'>Deep Unlearning</a></b> - Conducted research on deep unlearning techniques across diverse neural network architectures, focusing on model forgetfulness while maintaining accuracy for privacy-compliant AI systems. This introduces a novel comparison method for unlearning algorithms."
         },
         {
           "title": "Automatic Code Documentation",
-          "content": "<b><a href=${process.env.PUBLIC_URL + '/pdfs/Final_Report.pdf'} target='_blank'>Automatic Code Documentation with Transformers</a></b> - Developed an innovative hybrid architecture combining language-trained encoder and decoder for code summarization, showing potential for enhanced documentation with larger datasets and further fine-tuning."
+          "content": "<b><a href= '/pdfs/Final_Report.pdf'} target='_blank'>Automatic Code Documentation with Transformers</a></b> - Developed an innovative hybrid architecture combining language-trained encoder and decoder for code summarization, showing potential for enhanced documentation with larger datasets and further fine-tuning."
         }
       ],
       website_link: "https://oregonstate.edu/",
@@ -236,7 +236,7 @@ export const experience = [
         title: "Data Governance Platform",
         description: "Architected, designed, and led a team of 5 in developing the Data Governance Platform, enabling real-time data analytics, automated data validation, and end-to-end data lineage.",
         technologies: ["Java", "Angular", "MongoDB", "Data Analytics"],
-        categories: ["Data Engineering", "Full Stack"],
+        categories: ["Data Engineering", "Full Stack", "AI"],
         impact: "Increased data accuracy by 30% across Visa products"
       },
       {
@@ -269,17 +269,17 @@ export const experience = [
       },
       {
         title: "Integration Hub",
-        description: "Developed a scalable BizTalk application to automate client processes. Built a centralized logging platform and an automated token authorization workflow for onboarding.",
+        description: "Served as tech lead for the India team, managing 20+ client integrations, optimizing pipeline performance, and implementing centralized logging and automated token authorization workflow for onboarding.",
         technologies: ["BizTalk", "C#", ".NET", "Automation"],
-        categories: ["Integration", "Full Stack"],
+        categories: ["Integration", "Performance Optimization"],
         impact: "Optimized throughput by 40%"
       },
       {
         title: "Cube Performance Optimization",
-        description: "Achieved a significant increase in the performance of the dashboard in PowerBI by optimizing OLAP cubes.",
+        description: "Boosted PowerBI dashboard performance by optimizing OLAP cubes, range-based queries, and measures, alongside efficient ETL pipelines and snowflake schema design.",
         technologies: ["PowerBI", "OLAP", "Data Optimization"],
         categories: ["Data Engineering", "Performance Optimization"],
-        impact: "Reduced loading time from 2 minutes to 20 seconds, a 150% performance increase"
+        impact: "Achieved 150% decrease in dashboard loading time"
       },
       {
         title: "Test Automation Tool",
@@ -318,33 +318,97 @@ export const experience = [
   }*/
 ];
 
-
 export const projects = [
   {
-    name: "CodeGenie",
-    description: "Repository-based Code Assistant powered by OpenAI Codex. Designed to recommend or auto-complete code based on existing repository structures.",
-    tags: ["AI", "NLP", "OpenAI"],
+    title: "Cortex.ai: CI/CD Workflow Optimizer",
+    description: "Developed an LLM-powered tool to analyze GitHub Actions, visualize pipelines, and autonomously resolve inefficiencies in CI/CD processes. Utilized chain-of-thought reasoning to suggest workflow improvements.",
+    techStack: ["React", "Node.js", "OpenAI API", "Python"],
+    categories: ["AI/ML", "DevOps", "Web Development"]
   },
   {
-    name: "Data Governance Platform",
-    description: "Architected and led development of a platform enabling real-time data analytics, automated data validation, and end-to-end data lineage.",
-    tags: ["Data Engineering", "Analytics", "Architecture"],
+    title: "Deep Unlearning for Privacy-Compliant AI",
+    description: "Conducted comprehensive research on deep unlearning techniques to enable data removal from models while maintaining accuracy. Performed comparative analysis of Amnesiac Unlearning, Knowledge Transfer-based Unlearning, and Impair-Repair-based Unlearning across CNN, ResNet-18, and Vision Transformer architectures. Developed a novel comparison method for unlearning algorithms, contributing to privacy-compliant AI systems.",
+    techStack: ["Python", "PyTorch", "CNNs", "Transformers"],
+    categories: ["AI/ML", "Research"]
   },
   {
-    name: "Employee Referral Tool",
-    description: "Key contributor to an NLP-powered tool automating 90% of the referral process and reducing processing time by 50%.",
-    tags: ["NLP", "Process Automation"],
+    title: "Automatic Code Documentation Generation",
+    description: "Developed and evaluated a hybrid Transformer-based architecture for automatic code summarization, combining a code-trained encoder with a natural language-trained decoder. Implemented multi-layer perceptrons (MLPs) to bridge code and English embeddings. Demonstrated the importance of end-to-end training on code summarization datasets for improved performance.",
+    techStack: ["Python", "Transformers", "NLP", "PyTorch"],
+    categories: ["AI/ML", "NLP"]
   },
   {
-    name: "Smart Recommender System",
-    description: "Developed using NLP and Azure OpenAI, improving candidate selection efficiency by 60% and generating AI-crafted explanations for suitability.",
-    tags: ["AI", "NLP", "Azure OpenAI"],
+    title: "Rumour Stance and Veracity Detector for Twitter(X)",
+    description: "Developed for the SemEval RumourEval task to analyze and determine the veracity of social media content. Implemented a multi-stage system using Graph Conditional Random Fields (CRF) for stance classification (74% accuracy), stacked LSTM for veracity prediction (85% accuracy), and Deep Siamese Bi-LSTM for claim substantiation (87% accuracy on Stanford Natural Language Inference dataset).",
+    techStack: ["Python", "TensorFlow", "NLTK", "NetworkX"],
+    categories: ["AI/ML", "NLP", "Social Media Analysis"]
   },
   {
-    name: "Enterprise Data Archival and Retrieval System (EDARS)",
-    description: "Implemented using Angular, Kotlin, and MongoDB, saving Visa $250,000 annually in license costs.",
-    tags: ["Angular", "Kotlin", "MongoDB"],
+    title: "Tweet Sentiment Analyzer",
+    description: "Created a sentiment analysis system for tweet data to understand public opinion trends. Utilized logistic regression and naïve Bayes classifiers as baselines, then enhanced performance with GLoVe word embeddings and deep neural networks.",
+    techStack: ["Python", "TensorFlow", "NLTK", "Scikit-learn"],
+    categories: ["AI/ML", "NLP", "Social Media Analysis"]
   },
+  {
+    title: "Quora Question Pair Similarity Detector",
+    description: "Engineered a 'Siamese' LSTM network to identify semantically similar questions in the Quora dataset. Improved information retrieval and query understanding for enhanced search engine performance.",
+    techStack: ["Python", "PyTorch", "NLTK", "Scikit-learn"],
+    categories: ["AI/ML", "NLP", "Information Retrieval"]
+  },
+  {
+    title: "Shakespeare-style Text Generator",
+    description: "Created a language model using Gated Recurrent Units (GRUs) to generate Shakespeare-like text, demonstrating creative applications of NLP. Implemented custom data preprocessing for archaic English and developed a sampling strategy for text generation.",
+    techStack: ["Python", "TensorFlow", "NLTK"],
+    categories: ["AI/ML", "NLP", "Creative AI"]
+  },
+  {
+    title: "Named Entity Recognizer for Unstructured Text",
+    description: "Built an end-to-end Named Entity Recognition system to extract important information from unstructured text data. Implemented LSTM networks and linear layers with efficient data processing pipelines.",
+    techStack: ["Python", "TensorFlow", "spaCy", "Keras"],
+    categories: ["AI/ML", "NLP", "Information Extraction"]
+  },
+  {
+    title: "Sparkify: Music Streaming Analytics",
+    description: "Developed a comprehensive data analytics solution for a music streaming service. Implemented data processing pipelines, created a data lake, and enabled complex analytics queries.",
+    techStack: ["PySpark", "AWS Glue", "S3", "Athena", "Lambda", "Step Functions"],
+    categories: ["Big Data", "Cloud Computing", "Data Engineering"]
+  },
+  {
+    title: "Twitter-based Autocomplete System",
+    description: "Built an N-gram language model using a Twitter corpus for text autocompletion. Implemented efficient data structures and applied smoothing techniques to improve prediction accuracy.",
+    techStack: ["Python", "NLTK"],
+    categories: ["NLP", "Text Processing"]
+  },
+  {
+    title: "Data Warehouse for Music Streaming App",
+    description: "Architected an ELT pipeline to process JSON logs and metadata for a music streaming application. Implemented incremental data loading and historical data handling to enable efficient analysis of user activity and song plays.",
+    techStack: ["Python", "SQL", "AWS S3", "Redshift", "boto3"],
+    categories: ["Data Engineering", "Cloud Computing"]
+  },
+  {
+    title: "Automated ETL Pipeline for Music Streaming Company",
+    description: "Developed a production-grade data pipeline using Apache Airflow to automate the ETL process. Implemented custom operators for data quality checks and designed a DAG with complex task dependencies.",
+    techStack: ["Python", "Apache Airflow", "AWS Redshift", "S3"],
+    categories: ["Data Engineering", "Workflow Automation"]
+  },
+  {
+    title: "NoSQL Database for Music App Query Optimization",
+    description: "Designed a NoSQL database using Apache Cassandra to optimize queries for a music application. Implemented denormalized tables based on query patterns and developed an ETL pipeline for efficient data retrieval.",
+    techStack: ["Python", "Apache Cassandra", "CQL"],
+    categories: ["Database Design", "NoSQL"]
+  },
+  {
+    title: "Real-time Analytics Dashboard for Streaming Data",
+    description: "Built a real-time analytics solution using streaming data. Implemented a data pipeline with Kafka for data ingestion, Spark Streaming for real-time processing, and Cassandra for storage, with real-time dashboard visualization.",
+    techStack: ["Kafka", "Spark Streaming", "Cassandra", "Python"],
+    categories: ["Big Data", "Real-time Analytics", "Data Engineering"]
+  },
+  {
+    title: "Hybrid Data Model for Music Streaming Service",
+    description: "Developed both relational (PostgreSQL) and NoSQL (Apache Cassandra) data models for a music streaming application. Created optimized tables for song play analysis and implemented efficient ETL pipelines.",
+    techStack: ["Python", "PostgreSQL", "Apache Cassandra", "SQL", "CQL"],
+    categories: ["Database Design", "Data Modeling", "ETL"]
+  }
 ];
 
 export const publications = [
@@ -447,6 +511,12 @@ export const certifications = [
       link: "https://www.coursera.org/account/accomplishments/specialization/certificate/H9DGBVUCTLRD"
     },
     {
+      title: "Recommender Systems and Cluster Analysis in Python",
+      subtitle: "Udemy",
+      link: "https://ude.my/UC-854cf59e-757d-4612-badf-cbf00117cb32",
+    }
+    /*
+    {
       title: "Recommender Systems and Deep Learning in Python",
       subtitle: "Udemy",
       link: "https://ude.my/UC-2c264bae-b840-4b28-afb3-db1c58761357/",
@@ -456,6 +526,7 @@ export const certifications = [
       subtitle: "Udemy",
       link: "https://ude.my/UC-854cf59e-757d-4612-badf-cbf00117cb32",
     }
+      */
   ];
 
 export const contactPageData = {

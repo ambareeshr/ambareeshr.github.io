@@ -26,13 +26,13 @@ class Header extends Component {
             <a href="#skills" style = {{ color: theme.text, cursor: 'pointer' }}>Skills</a>
           </li>
           <li>
+            <a href="#patents" style = {{ color: theme.text, cursor: 'pointer' }}>Patents</a>
+          </li>
+          <li>
             <a href="#education" style = {{ color: theme.text, cursor: 'pointer' }}>Education</a>
           </li>
           <li>
             <a href="#experience" style = {{ color: theme.text, cursor: 'pointer' }}>Experience</a>
-          </li>
-          <li>
-            <a href="#patents" style = {{ color: theme.text, cursor: 'pointer' }}>Patents</a>
           </li>
           <li>
             <a href="#contact" style = {{ color: theme.text, cursor: 'pointer' }}>Contact Me</a>

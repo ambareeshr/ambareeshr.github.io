@@ -10,7 +10,7 @@ import {Awards} from "./sections/awards";
 import Publications from "./sections/publications";
 import Certifications from "./sections/certifications";
 import Patents from "./sections/patents";
-import Skills from "./sections/skills";
+import Skills from "./containers/skills/Skills";
 
 
 export default class Main extends Component {
@@ -21,11 +21,12 @@ export default class Main extends Component {
         <div>
             <Home theme={this.props.theme} />
             <Skills theme={this.props.theme} /> 
-            <Education theme={this.props.theme} />
-            <Experience theme={this.props.theme} />
             <Patents theme={this.props.theme} />
             <Publications theme={theme} />
-            <Awards theme={theme} />
+            <Education theme={this.props.theme} />
+            <Experience theme={this.props.theme} />
+            {/*<Projects theme={theme} />*/}
+            {/*<Awards theme={theme} />*/}
             <Certifications theme={this.props.theme} />
             <Contact theme={this.props.theme} />
             <Footer theme={this.props.theme} />
