@@ -64,7 +64,7 @@ const Grid = styled.div`
 
 const PatentCard = styled(motion.div)`
   background: ${props => props.theme.cardBg};
-  border: 1px solid ${props => props.theme.border};
+  border: 1px solid ${props => props.theme.divider};
   padding: 2.5rem;
   position: relative;
   overflow: hidden;
@@ -73,8 +73,9 @@ const PatentCard = styled(motion.div)`
 
   &:hover {
     background: ${props => props.theme.cardBgHover};
-    border-color: ${props => props.theme.divider};
+    border-color: ${props => props.theme.borderHover};
     transform: translateY(-4px);
+    box-shadow: ${props => props.theme.cardHoverShadow};
 
     &:before {
       opacity: 1;

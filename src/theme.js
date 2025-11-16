@@ -11,26 +11,27 @@ export const minimalDarkTheme = {
   secondary: "#808080",               // Grey for secondary
   accent: "#C0C0C0",                  // Light grey accent
 
-  // Borders and dividers
-  border: "#1A1A1A",                  // Subtle dark grey
-  divider: "#2A2A2A",                 // Slightly lighter divider
+  // Borders and dividers - improved visibility
+  border: "#2A2A2A",                  // Darker grey for subtle borders
+  divider: "#404040",                 // Medium grey for dividers
+  borderHover: "#505050",             // Lighter on hover
 
   // Cards and surfaces
   cardBg: "#0A0A0A",                  // Almost black
-  cardBgHover: "#121212",             // Slightly lighter on hover
-  surfaceElevated: "#141414",         // Elevated surfaces
+  cardBgHover: "#141414",             // Slightly lighter on hover
+  surfaceElevated: "#1A1A1A",         // Elevated surfaces
 
-  // Shadows - subtle
-  cardShadow: "0 1px 3px rgba(255, 255, 255, 0.02)",
-  cardHoverShadow: "0 8px 24px rgba(255, 255, 255, 0.08)",
+  // Shadows - subtle with white glow
+  cardShadow: "0 2px 8px rgba(255, 255, 255, 0.03)",
+  cardHoverShadow: "0 8px 24px rgba(255, 255, 255, 0.06)",
 
   // Effects
-  overlay: "rgba(0, 0, 0, 0.9)",
+  overlay: "rgba(0, 0, 0, 0.95)",
   glassEffect: "rgba(20, 20, 20, 0.8)",
 
   // Highlights - very subtle
   highlight: "#FFFFFF",
-  highlightDim: "#505050",
+  highlightDim: "#606060",
 
   // Status colors - muted
   success: "#D0D0D0",
@@ -39,7 +40,7 @@ export const minimalDarkTheme = {
 
   // Special effects
   shimmer: "linear-gradient(90deg, transparent, rgba(255,255,255,0.03), transparent)",
-  borderGlow: "1px solid rgba(255, 255, 255, 0.1)",
+  borderGlow: "1px solid rgba(255, 255, 255, 0.15)",
 
   // Typography
   fontPrimary: "'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif",

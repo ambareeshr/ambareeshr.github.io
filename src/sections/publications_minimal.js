@@ -56,7 +56,7 @@ const PublicationsList = styled.div`
 
 const PublicationItem = styled(motion.div)`
   padding: 2.5rem 0;
-  border-bottom: 1px solid ${props => props.theme.border};
+  border-bottom: 1px solid ${props => props.theme.divider};
   position: relative;
   cursor: pointer;
   transition: ${props => props.theme.transition};
@@ -67,6 +67,7 @@ const PublicationItem = styled(motion.div)`
 
   &:hover {
     padding-left: 2rem;
+    border-bottom-color: ${props => props.theme.borderHover};
 
     &:before {
       opacity: 1;
