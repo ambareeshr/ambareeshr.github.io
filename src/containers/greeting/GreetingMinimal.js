@@ -250,7 +250,7 @@ const ScrollLine = styled(motion.div)`
 const GreetingMinimal = ({ theme }) => {
   const [displayedName, setDisplayedName] = useState('');
   const [isTypingComplete, setIsTypingComplete] = useState(false);
-  const fullName = 'Ambareesh';
+  const fullName = 'Ambareesh Ramakrishnan';
 
   useEffect(() => {
     let currentIndex = 0;
@@ -262,7 +262,7 @@ const GreetingMinimal = ({ theme }) => {
         setIsTypingComplete(true);
         clearInterval(typingInterval);
       }
-    }, 150);
+    }, 100);
 
     return () => clearInterval(typingInterval);
   }, []);
@@ -300,13 +300,12 @@ const GreetingMinimal = ({ theme }) => {
                 {!isTypingComplete && <Cursor theme={theme} />}
               </TypingText>
             </Name>
-            <Name theme={theme}>Ramakrishnan</Name>
           </NameWrapper>
 
           <Subtitle
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 1.5 }}
+            transition={{ duration: 0.6, delay: 3 }}
             theme={theme}
           >
             Master's in Computer Science with AI Concentration at Oregon State University.
@@ -316,7 +315,7 @@ const GreetingMinimal = ({ theme }) => {
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 1.7 }}
+            transition={{ duration: 0.6, delay: 3.2 }}
           >
             <SocialMedia theme={theme} />
           </motion.div>
@@ -325,7 +324,7 @@ const GreetingMinimal = ({ theme }) => {
         <RightSection
           initial={{ opacity: 0, x: 50 }}
           animate={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.8, delay: 1 }}
+          transition={{ duration: 0.8, delay: 1.5 }}
         >
           <TLDRCard theme={theme}>
             <TLDRHeader theme={theme}>TL;DR</TLDRHeader>
@@ -354,7 +353,7 @@ const GreetingMinimal = ({ theme }) => {
         onClick={scrollToNext}
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
-        transition={{ duration: 0.6, delay: 2 }}
+        transition={{ duration: 0.6, delay: 3.5 }}
       >
         <ScrollText theme={theme}>Scroll</ScrollText>
         <ScrollLine theme={theme} />

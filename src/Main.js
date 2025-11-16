@@ -4,13 +4,13 @@ import Home from "./sections/home";
 import Contact from "./sections/contact";
 import Footer from "./shared/footer/Footer";
 import TopButton from "./shared/topButton/TopButton";
-import Education from "./sections/education";
-import Experience from "./sections/experience";
-import {Awards} from "./sections/awards";
+import EducationMinimal from "./sections/education_minimal";
+import ExperienceMinimal from "./sections/experience_minimal";
+import {Awards} from "./sections/awards_minimal";
 import PublicationsMinimal from "./sections/publications_minimal";
-import Certifications from "./sections/certifications";
+import CertificationsMinimal from "./sections/certifications_minimal";
 import PatentsMinimal from "./sections/patents_minimal";
-import Skills from "./containers/skills/Skills";
+import SkillsMinimal from "./containers/skills/SkillsMinimal";
 
 
 export default class Main extends Component {
@@ -20,14 +20,14 @@ export default class Main extends Component {
     return (
         <div style={{ background: theme.body }}>
             <Home theme={this.props.theme} />
-            <Skills theme={this.props.theme} />
+            <SkillsMinimal theme={this.props.theme} />
             <PatentsMinimal theme={this.props.theme} />
             <PublicationsMinimal theme={theme} />
-            <Education theme={this.props.theme} />
-            <Experience theme={this.props.theme} />
+            <EducationMinimal theme={this.props.theme} />
+            <ExperienceMinimal theme={this.props.theme} />
             {/*<Projects theme={theme} />*/}
             <Awards theme={this.props.theme} />
-            <Certifications theme={this.props.theme} />
+            <CertificationsMinimal theme={this.props.theme} />
             <Contact theme={this.props.theme} />
             <Footer theme={this.props.theme} />
             <TopButton theme={this.props.theme} />
