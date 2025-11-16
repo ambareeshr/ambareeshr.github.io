@@ -26,7 +26,7 @@ export default class Main extends Component {
             <Education theme={this.props.theme} />
             <Experience theme={this.props.theme} />
             {/*<Projects theme={theme} />*/}
-            {/*<Awards theme={theme} />*/}
+            <Awards theme={this.props.theme} />
             <Certifications theme={this.props.theme} />
             <Contact theme={this.props.theme} />
             <Footer theme={this.props.theme} />

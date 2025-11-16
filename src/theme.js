@@ -119,4 +119,26 @@ export const orangeTheme = {
   headerColor: "#FF6B3577",
 };
 
-export const chosenTheme = greenTheme;
+// Modern sleek theme with contemporary design
+export const modernTheme = {
+  body: "#FAFBFC",
+  text: "#1A1F36",
+  highlight: "#6366F1",
+  dark: "#0F1419",
+  secondaryText: "#6B7280",
+  imageHighlight: "#6366F1",
+  compImgHighlight: "#E5E7EB",
+  jacketColor: "#4F46E5",
+  headerColor: "#6366F144",
+  primary: "#6366F1",      // Indigo
+  secondary: "#8B5CF6",    // Purple
+  accent: "#EC4899",       // Pink
+  success: "#10B981",      // Green
+  cardBg: "#FFFFFF",
+  cardShadow: "0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06)",
+  cardHoverShadow: "0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04)",
+  gradient: "linear-gradient(135deg, #6366F1 0%, #8B5CF6 50%, #EC4899 100%)",
+  gradientSubtle: "linear-gradient(135deg, #EEF2FF 0%, #F3E8FF 100%)",
+};
+
+export const chosenTheme = modernTheme;
