@@ -194,7 +194,7 @@ const Publications = ({ theme }) => {
           initial="hidden"
           animate={mainControls}
         >
-          03 — Publications
+          04 — Publications
         </SectionNumber>
         <SectionTitle
           theme={theme}

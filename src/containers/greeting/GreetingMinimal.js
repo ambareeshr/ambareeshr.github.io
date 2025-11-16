@@ -286,7 +286,7 @@ const GreetingMinimal = ({ theme }) => {
             transition={{ duration: 0.6, delay: 0.2 }}
             theme={theme}
           >
-            Software Engineer • AI Researcher
+            Senior Software Engineer @ Visa • GenAI Platform
           </Label>
 
           <NameWrapper
@@ -308,8 +308,8 @@ const GreetingMinimal = ({ theme }) => {
             transition={{ duration: 0.6, delay: 3 }}
             theme={theme}
           >
-            Master's in Computer Science with AI Concentration at Oregon State University.
-            Building next-generation AI solutions with a focus on scalability and innovation.
+            Senior Software Engineer at Visa, working on Generative AI Platform.
+            MS in Computer Science from Oregon State University (4.0 GPA).
           </Subtitle>
 
           <motion.div
@@ -330,7 +330,10 @@ const GreetingMinimal = ({ theme }) => {
             <TLDRHeader theme={theme}>TL;DR</TLDRHeader>
             <TLDRList>
               <TLDRItem theme={theme}>
-                4.0 GPA Master's student graduating March 2025
+                Senior SWE at Visa - GenAI Platform (Austin, TX)
+              </TLDRItem>
+              <TLDRItem theme={theme}>
+                MS CS from OSU with 4.0 GPA (Graduated March 2025)
               </TLDRItem>
               <TLDRItem theme={theme}>
                 2 Patents + ICSE Publication (12% acceptance)
@@ -339,10 +342,7 @@ const GreetingMinimal = ({ theme }) => {
                 Built RAG systems with 92% accuracy across 1000+ workflows
               </TLDRItem>
               <TLDRItem theme={theme}>
-                4 years at Visa: Led teams, saved $250K, optimized systems
-              </TLDRItem>
-              <TLDRItem theme={theme}>
-                Expertise: GenAI, Full-Stack, Data Engineering
+                Expertise: GenAI, RAG, Full-Stack, Data Engineering
               </TLDRItem>
             </TLDRList>
           </TLDRCard>

@@ -220,7 +220,7 @@ const Education = ({ theme }) => {
           initial="hidden"
           animate={mainControls}
         >
-          04 — Education
+          05 — Education
         </SectionNumber>
         <SectionTitle
           theme={theme}

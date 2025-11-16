@@ -4,6 +4,7 @@ import Home from "./sections/home";
 import Contact from "./sections/contact";
 import Footer from "./shared/footer/Footer";
 import TopButton from "./shared/topButton/TopButton";
+import SectionNav from "./shared/sectionNav/SectionNav";
 import EducationMinimal from "./sections/education_minimal";
 import ExperienceMinimal from "./sections/experience_minimal";
 import {Awards} from "./sections/awards_minimal";
@@ -19,12 +20,13 @@ export default class Main extends Component {
     console.log(theme);
     return (
         <div style={{ background: theme.body }}>
+            <SectionNav theme={this.props.theme} />
             <Home theme={this.props.theme} />
             <SkillsMinimal theme={this.props.theme} />
+            <ExperienceMinimal theme={this.props.theme} />
             <PatentsMinimal theme={this.props.theme} />
             <PublicationsMinimal theme={theme} />
             <EducationMinimal theme={this.props.theme} />
-            <ExperienceMinimal theme={this.props.theme} />
             {/*<Projects theme={theme} />*/}
             <Awards theme={this.props.theme} />
             <CertificationsMinimal theme={this.props.theme} />

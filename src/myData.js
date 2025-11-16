@@ -6,7 +6,7 @@ export const greeting = {
   title: "Ambareesh Ramakrishnan",
   logo_name: "Ambareesh",
   subTitle:
-  "Passionate software engineer with expertise in Generative AI, full-stack, and data engineering. Skilled at building scalable solutions across various domains using modern technologies and cloud platforms.",
+  "Senior Software Engineer at Visa working on Generative AI Platform. MS in Computer Science from Oregon State University. Passionate about building AI-powered solutions, scalable platforms, and innovative tools.",
 };
 
 export const socialMediaLinks = [
@@ -146,7 +146,7 @@ export const degrees = {
       subtitle: "Master of Science in Computer Science with AI Concentration",
       logo_path: "osu_logo.jpg",
       alt_name: "OSU",
-      duration: "Sep 2023 - March 2025 (Expected)",
+      duration: "Sep 2023 - March 2025",
       location: "Corvallis, Oregon, USA",
       cgpa: "4/4",
       descriptions: [
@@ -226,12 +226,29 @@ export const degrees = {
 
 export const experience = [
   {
+    company: "Visa Inc.",
+    role: "Senior Software Engineer - Generative AI Platform",
+    duration: "April 2025 - Present",
+    location: "Austin, Texas, USA",
+    logo_path: "visa_transparent.png",
+    oneLineDescription:"Building next-generation AI-powered platforms and tools to transform enterprise software development and operations.",
+    projects: [
+      {
+        title: "Generative AI Platform Development",
+        description: "Architecting and developing scalable GenAI platform infrastructure to enable AI-powered solutions across Visa's enterprise applications.",
+        technologies: ["Python", "Azure OpenAI", "LangChain", "Kubernetes", "Azure"],
+        categories: ["AI", "Platform Engineering"],
+        impact: "Enabling enterprise-wide AI adoption and innovation"
+      }
+    ]
+  },
+  {
     company: "Oregon State University",
     role: "Research Assistant",
-    duration: "Sep 2023 - Present",
-    location: "Oregon, USA",
+    duration: "Sep 2023 - March 2025",
+    location: "Corvallis, Oregon, USA",
     logo_path: "osu_logo.jpg",
-    oneLineDescription:"Developing AI-powered tools for CI/CD optimization and inclusivity detection using advanced RAG systems and prompt engineering techniques.",
+    oneLineDescription:"Developed AI-powered tools for CI/CD optimization and inclusivity detection using advanced RAG systems and prompt engineering techniques.",
     projects: [
       {
         title: "AI Cortex - CI/CD Pipeline Optimizer",

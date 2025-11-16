@@ -200,7 +200,7 @@ const Patents = ({ theme }) => {
           initial="hidden"
           animate={mainControls}
         >
-          02 — Patents
+          03 — Patents
         </SectionNumber>
         <SectionTitle
           theme={theme}

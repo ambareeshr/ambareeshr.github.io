@@ -1,7 +1,8 @@
 import React, { useState, useEffect, useRef } from 'react';
 import styled from 'styled-components';
 import { motion, useInView, useAnimation, AnimatePresence } from 'framer-motion';
-import { experience } from '../myData';
+import { FaLinkedin, FaQuoteLeft, FaBuilding } from 'react-icons/fa';
+import { experience, recommendations } from '../myData';
 
 const Section = styled.section`
   min-height: 100vh;
@@ -84,6 +85,14 @@ const CompanyName = styled.h3`
   color: ${props => props.theme.text};
   margin: 0;
   letter-spacing: -0.02em;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+`;
+
+const CompanyIcon = styled(FaBuilding)`
+  font-size: 1.5rem;
+  color: ${props => props.theme.secondaryText};
 `;
 
 const Role = styled.div`
@@ -257,6 +266,93 @@ const Impact = styled.div`
   }
 `;
 
+const RecommendationCard = styled(motion.div)`
+  background: ${props => props.theme.cardBg};
+  border: 1px solid ${props => props.theme.divider};
+  padding: 0;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  grid-column: span 2;
+  transition: ${props => props.theme.transition};
+
+  &:hover {
+    background: ${props => props.theme.cardBgHover};
+    border-color: ${props => props.theme.borderHover};
+    transform: translateY(-4px);
+    box-shadow: ${props => props.theme.cardHoverShadow};
+  }
+
+  @media (max-width: 900px) {
+    grid-column: span 1;
+  }
+`;
+
+const RecommendationHeader = styled.div`
+  padding: 1.5rem 2rem;
+  border-bottom: 1px solid ${props => props.theme.divider};
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  background: ${props => props.theme.cardBg};
+`;
+
+const LinkedInIcon = styled(FaLinkedin)`
+  color: #0a66c2;
+  font-size: 1.5rem;
+`;
+
+const RecommendationLabel = styled.span`
+  font-family: ${props => props.theme.fontMono};
+  font-size: 0.7rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: ${props => props.theme.secondaryText};
+`;
+
+const RecommendationBody = styled.div`
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  flex: 1;
+`;
+
+const QuoteIcon = styled(FaQuoteLeft)`
+  color: ${props => props.theme.tertiaryText};
+  font-size: 1.2rem;
+`;
+
+const RecommendationText = styled.p`
+  font-size: 0.95rem;
+  line-height: 1.7;
+  color: ${props => props.theme.secondaryText};
+  margin: 0;
+  font-style: italic;
+`;
+
+const RecommenderInfo = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  margin-top: auto;
+  padding-top: 1.5rem;
+  border-top: 1px solid ${props => props.theme.border};
+`;
+
+const RecommenderName = styled.div`
+  font-size: 1rem;
+  font-weight: 600;
+  color: ${props => props.theme.text};
+`;
+
+const RecommenderPosition = styled.div`
+  font-family: ${props => props.theme.fontMono};
+  font-size: 0.8rem;
+  color: ${props => props.theme.tertiaryText};
+`;
+
 const Experience = ({ theme }) => {
   const containerRef = useRef(null);
   const isInView = useInView(containerRef, { once: true, margin: "-100px" });
@@ -309,7 +405,7 @@ const Experience = ({ theme }) => {
           initial="hidden"
           animate={mainControls}
         >
-          05 — Experience
+          02 — Experience
         </SectionNumber>
         <SectionTitle
           theme={theme}
@@ -317,7 +413,7 @@ const Experience = ({ theme }) => {
           initial="hidden"
           animate={mainControls}
         >
-          Work History
+          Work Experience
         </SectionTitle>
         <SectionDescription
           theme={theme}
@@ -335,11 +431,16 @@ const Experience = ({ theme }) => {
           ? company.projects
           : company.projects.filter(project => project.categories.includes(filters[companyIndex]));
 
+        const companyRecommendations = recommendations.filter(rec => rec.company_name === company.company);
+
         return (
           <ExperienceContainer key={companyIndex}>
             <CompanyHeader>
               <CompanyMeta>
-                <CompanyName theme={theme}>{company.company}</CompanyName>
+                <CompanyName theme={theme}>
+                  <CompanyIcon theme={theme} />
+                  {company.company}
+                </CompanyName>
                 <Duration theme={theme}>{company.duration}</Duration>
               </CompanyMeta>
               <Role theme={theme}>{company.role}</Role>
@@ -395,6 +496,33 @@ const Experience = ({ theme }) => {
                     </TechStack>
                     <Impact theme={theme}>{project.impact}</Impact>
                   </ProjectCard>
+                ))}
+
+                {companyRecommendations.map((rec, index) => (
+                  <RecommendationCard
+                    key={`rec-${index}`}
+                    theme={theme}
+                    variants={itemVariants}
+                    initial="hidden"
+                    animate="visible"
+                    exit={{ opacity: 0, scale: 0.9 }}
+                    layout
+                  >
+                    <RecommendationHeader theme={theme}>
+                      <LinkedInIcon />
+                      <RecommendationLabel theme={theme}>LinkedIn Recommendation</RecommendationLabel>
+                    </RecommendationHeader>
+                    <RecommendationBody>
+                      <QuoteIcon theme={theme} />
+                      <RecommendationText theme={theme}>
+                        "{rec.text}"
+                      </RecommendationText>
+                      <RecommenderInfo theme={theme}>
+                        <RecommenderName theme={theme}>{rec.name}</RecommenderName>
+                        <RecommenderPosition theme={theme}>{rec.position}</RecommenderPosition>
+                      </RecommenderInfo>
+                    </RecommendationBody>
+                  </RecommendationCard>
                 ))}
               </AnimatePresence>
             </ProjectsGrid>
