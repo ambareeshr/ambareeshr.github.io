@@ -1,6 +1,7 @@
-import React, { useEffect, useRef } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import styled from 'styled-components';
 import { motion, useInView, useAnimation } from 'framer-motion';
+import { FaGraduationCap, FaChevronDown, FaChevronUp } from 'react-icons/fa';
 import { degrees } from '../myData';
 
 const Section = styled.section`
@@ -114,6 +115,14 @@ const Institution = styled.h3`
   color: ${props => props.theme.text};
   margin: 0 0 0.5rem 0;
   letter-spacing: -0.02em;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+`;
+
+const UniversityIcon = styled(FaGraduationCap)`
+  font-size: 1.5rem;
+  color: ${props => props.theme.secondaryText};
 `;
 
 const Degree = styled.div`
@@ -176,10 +185,44 @@ const HighlightItem = styled.li`
   }
 `;
 
+const ExpandButton = styled.button`
+  font-family: ${props => props.theme.fontMono};
+  font-size: 0.7rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: ${props => props.theme.text};
+  background: transparent;
+  border: 1px solid ${props => props.theme.border};
+  padding: 0.6rem 1.2rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-top: 1.5rem;
+  transition: ${props => props.theme.transition};
+
+  &:hover {
+    border-color: ${props => props.theme.borderHover};
+    background: ${props => props.theme.cardBgHover};
+  }
+
+  svg {
+    font-size: 0.6rem;
+  }
+`;
+
 const Education = ({ theme }) => {
   const containerRef = useRef(null);
   const isInView = useInView(containerRef, { once: true, margin: "-100px" });
   const mainControls = useAnimation();
+  const [expandedDegrees, setExpandedDegrees] = useState({});
+
+  const toggleExpand = (index) => {
+    setExpandedDegrees(prev => ({
+      ...prev,
+      [index]: !prev[index]
+    }));
+  };
 
   useEffect(() => {
     if (isInView) {
@@ -255,19 +298,33 @@ const Education = ({ theme }) => {
             >
               <TimelineDot theme={theme} />
               <Duration theme={theme}>{degree.duration}</Duration>
-              <Institution theme={theme}>{degree.title}</Institution>
+              <Institution theme={theme}>
+                <UniversityIcon theme={theme} />
+                {degree.title}
+              </Institution>
               <Degree theme={theme}>{degree.subtitle}</Degree>
               <Location theme={theme}>{degree.location}</Location>
               <GPA theme={theme}>CGPA: {degree.cgpa}</GPA>
               <HighlightsList>
-                {degree.points && degree.points.map((point, idx) => (
-                  <HighlightItem
-                    key={idx}
-                    theme={theme}
-                    dangerouslySetInnerHTML={{ __html: point.content }}
-                  />
-                ))}
+                {degree.points && degree.points
+                  .slice(0, expandedDegrees[index] ? degree.points.length : 3)
+                  .map((point, idx) => (
+                    <HighlightItem
+                      key={idx}
+                      theme={theme}
+                      dangerouslySetInnerHTML={{ __html: point.content }}
+                    />
+                  ))}
               </HighlightsList>
+              {degree.points && degree.points.length > 3 && (
+                <ExpandButton theme={theme} onClick={() => toggleExpand(index)}>
+                  {expandedDegrees[index] ? (
+                    <>Show Less <FaChevronUp /></>
+                  ) : (
+                    <>Explore More <FaChevronDown /></>
+                  )}
+                </ExpandButton>
+              )}
             </DegreeCard>
           ))}
         </motion.div>

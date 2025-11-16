@@ -5,16 +5,14 @@ import { socialMediaLinks } from "../../myData";
 
 const SocialMediaContainer = styled(motion.div)`
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
+  gap: 1rem;
   margin-top: 1rem;
-  padding: 10px;
-  background: rgba(255, 255, 255, 0.1);
-  border-radius: 30px;
-  backdrop-filter: blur(10px);
 
   @media (max-width: 768px) {
     flex-wrap: wrap;
+    gap: 0.75rem;
   }
 `;
 
@@ -22,10 +20,9 @@ const SocialMediaItem = styled(motion.div)`
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin: 0 5px;
 
   @media (max-width: 768px) {
-    margin: 5px;
+    margin: 0;
   }
 `;
 
@@ -33,30 +30,42 @@ const SocialMediaLink = styled(motion.a)`
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 50px;
-  height: 50px;
-  border-radius: 50%;
-  background-color: ${props => props.backgroundColor};
-  color: white;
-  font-size: 1.2rem;
+  width: 45px;
+  height: 45px;
+  border-radius: 0;
+  background-color: transparent;
+  border: 1px solid ${props => props.theme.border};
+  color: ${props => props.theme.text};
+  font-size: 1.1rem;
   text-decoration: none;
   position: relative;
+  transition: ${props => props.theme.transition};
+
+  &:hover {
+    border-color: ${props => props.theme.text};
+    background: ${props => props.theme.cardBgHover};
+  }
+
   @media (max-width: 768px) {
     width: 40px;
     height: 40px;
+    font-size: 1rem;
   }
 `;
 
 const Tooltip = styled(motion.div)`
   position: absolute;
-  top: -40px;
+  top: -45px;
   left: 50%;
   transform: translateX(-50%);
-  background-color: ${props => props.theme.text};
-  color: ${props => props.theme.body};
-  padding: 5px 10px;
-  border-radius: 5px;
-  font-size: 0.8rem;
+  background-color: ${props => props.theme.cardBg};
+  color: ${props => props.theme.text};
+  border: 1px solid ${props => props.theme.border};
+  padding: 0.4rem 0.8rem;
+  font-family: ${props => props.theme.fontMono};
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
   white-space: nowrap;
   pointer-events: none;
   z-index: 1000;
@@ -92,17 +101,14 @@ const SocialMedia = ({ theme }) => {
               href={media.link}
               target="_blank"
               rel="noopener noreferrer"
-              backgroundColor={media.backgroundColor}
+              theme={theme}
               onMouseEnter={() => setHoveredIcon(media.name)}
               onMouseLeave={() => setHoveredIcon(null)}
-              animate={{
-                scale: isHovered ? 1.2 : 1,
-              }}
+              whileHover={{ y: -3 }}
               transition={{
                 type: "spring",
-                stiffness: 500,
-                damping: 15,
-                mass: 0.1,
+                stiffness: 400,
+                damping: 20,
               }}
             >
               <IconComponent />
