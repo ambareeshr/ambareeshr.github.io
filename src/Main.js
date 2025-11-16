@@ -12,6 +12,7 @@ import PublicationsMinimal from "./sections/publications_minimal";
 import CertificationsMinimal from "./sections/certifications_minimal";
 import PatentsMinimal from "./sections/patents_minimal";
 import SkillsMinimal from "./containers/skills/SkillsMinimal";
+import RecommendationsMinimal from "./sections/recommendations_minimal";
 
 
 export default class Main extends Component {
@@ -30,6 +31,7 @@ export default class Main extends Component {
             {/*<Projects theme={theme} />*/}
             <Awards theme={this.props.theme} />
             <CertificationsMinimal theme={this.props.theme} />
+            <RecommendationsMinimal theme={this.props.theme} />
             <Contact theme={this.props.theme} />
             <Footer theme={this.props.theme} />
             <TopButton theme={this.props.theme} />

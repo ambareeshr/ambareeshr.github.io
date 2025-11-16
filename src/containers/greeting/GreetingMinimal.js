@@ -180,6 +180,8 @@ const TLDRItem = styled.li`
   margin-bottom: 1rem;
   padding-left: 1.5rem;
   position: relative;
+  cursor: ${props => props.clickable ? 'pointer' : 'default'};
+  transition: ${props => props.theme.transition};
 
   &:last-child {
     margin-bottom: 0;
@@ -190,6 +192,30 @@ const TLDRItem = styled.li`
     position: absolute;
     left: 0;
     color: ${props => props.theme.text};
+    transition: ${props => props.theme.transition};
+  }
+
+  ${props => props.clickable && `
+    &:hover {
+      color: ${props.theme.text};
+      padding-left: 2rem;
+
+      &:before {
+        left: 0.5rem;
+      }
+    }
+  `}
+`;
+
+const ClickableText = styled.span`
+  cursor: pointer;
+  z-index: 10;
+  transition: ${props => props.theme.transition};
+  border-bottom: 1px solid transparent;
+
+  &:hover {
+    color: ${props => props.theme.text};
+    border-bottom-color: ${props => props.theme.text};
   }
 `;
 
@@ -203,6 +229,7 @@ const ScrollIndicator = styled(motion.div)`
   align-items: center;
   gap: 0.5rem;
   cursor: pointer;
+  z-index: 10;
 
   @media (max-width: 768px) {
     bottom: 2rem;
@@ -274,6 +301,15 @@ const GreetingMinimal = ({ theme }) => {
     });
   };
 
+  const scrollToSection = (sectionId) => {
+    const section = document.getElementById(sectionId);
+    if (section) {
+      const yOffset = -100;
+      const y = section.getBoundingClientRect().top + window.pageYOffset + yOffset;
+      window.scrollTo({ top: y, behavior: 'smooth' });
+    }
+  };
+
   return (
     <HeroSection theme={theme}>
       <GridBackground theme={theme} />
@@ -329,20 +365,22 @@ const GreetingMinimal = ({ theme }) => {
           <TLDRCard theme={theme}>
             <TLDRHeader theme={theme}>TL;DR</TLDRHeader>
             <TLDRList>
-              <TLDRItem theme={theme}>
-                Senior SWE at Visa - GenAI Platform (Austin, TX)
+              <TLDRItem theme={theme} clickable onClick={() => scrollToSection('experience')}>
+                5+ years building GenAI & enterprise platforms at Visa
               </TLDRItem>
-              <TLDRItem theme={theme}>
-                MS CS from OSU with 4.0 GPA (Graduated March 2025)
+              <TLDRItem theme={theme} clickable onClick={() => scrollToSection('publications')}>
+                <ClickableText onClick={() => scrollToSection('publications')}>2 Defensive Publications</ClickableText>{' + '}
+                <ClickableText onClick={() => scrollToSection('patents')}>2 Patents Pending</ClickableText>{' + '}
+                <ClickableText onClick={() => scrollToSection('publications')}>ICSE Publication</ClickableText>
               </TLDRItem>
-              <TLDRItem theme={theme}>
-                2 Patents + ICSE Publication (12% acceptance)
+              <TLDRItem theme={theme} clickable onClick={() => scrollToSection('experience')}>
+                Built RAG systems with 92% accuracy • Saved $250K annually
               </TLDRItem>
-              <TLDRItem theme={theme}>
-                Built RAG systems with 92% accuracy across 1000+ workflows
+              <TLDRItem theme={theme} clickable onClick={() => scrollToSection('education')}>
+                MS CS from Oregon State University (Graduated March 2025)
               </TLDRItem>
-              <TLDRItem theme={theme}>
-                Expertise: GenAI, RAG, Full-Stack, Data Engineering
+              <TLDRItem theme={theme} clickable onClick={() => scrollToSection('skills')}>
+                Expert: Azure OpenAI • LangChain • RAG • Full-Stack • Cloud
               </TLDRItem>
             </TLDRList>
           </TLDRCard>

@@ -87,13 +87,14 @@ const ProgressLine = styled.div`
 `;
 
 const sections = [
-  { id: 'skills', label: '01 Skills', offset: 0 },
-  { id: 'experience', label: '02 Experience', offset: 0 },
-  { id: 'patents', label: '03 Patents', offset: 0 },
-  { id: 'publications', label: '04 Publications', offset: 0 },
-  { id: 'education', label: '05 Education', offset: 0 },
-  { id: 'awards', label: '06 Awards', offset: 0 },
-  { id: 'certifications', label: '07 Certifications', offset: 0 },
+  { id: 'skills', label: '01 Skills' },
+  { id: 'experience', label: '02 Experience' },
+  { id: 'patents', label: '03 Patents' },
+  { id: 'publications', label: '04 Publications' },
+  { id: 'education', label: '05 Education' },
+  { id: 'awards', label: '06 Awards' },
+  { id: 'certifications', label: '07 Certifications' },
+  { id: 'recommendations', label: '08 Recommendations' },
 ];
 
 const SectionNav = ({ theme }) => {
