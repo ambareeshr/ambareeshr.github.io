@@ -452,7 +452,8 @@ export const patents = [
     status: "Filed",
     date: "Dec 19, 2023",
     description: "A novel approach to secure authentication in software applications, enhancing user security while maintaining a seamless user experience.",
-    coAuthors: ["Shruti Dahiya", "Swathykrishnan K Chandran"]
+    coAuthors: ["Shruti Dahiya", "Swathykrishnan K Chandran"],
+    link: "https://patentscope.wipo.int/search/en/detail.jsf?docId=US402375209"
   },
   {
     title: "Detection Of XSS Attacks Using Deep Learning Models",
@@ -460,7 +461,9 @@ export const patents = [
     status: "Filed",
     date: "Sep 17, 2024",
     description: "An innovative method for detecting Cross-Site Scripting (XSS) attacks using advanced deep learning models, significantly improving web application security.",
-    coAuthors: ["Shruti Dahiya", "Swathykrishnan K Chandran"]  },
+    coAuthors: ["Shruti Dahiya", "Swathykrishnan K Chandran"],
+    link: "https://patentscope.wipo.int/search/en/detail.jsf?docId=US417042106"
+  },
 ];
 
 export const recommendations = [

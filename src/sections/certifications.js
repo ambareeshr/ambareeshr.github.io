@@ -19,10 +19,18 @@ const SectionTitle = styled.h2`
 
 const CardContainer = styled.div`
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-columns: repeat(4, 1fr);
   gap: 30px;
-  //max-width: 1200px;
+  max-width: 1400px;
   margin: 0 auto;
+
+  @media (max-width: 1200px) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @media (max-width: 768px) {
+    grid-template-columns: 1fr;
+  }
 `;
 
 const Card = styled(motion.div)`
@@ -76,8 +84,8 @@ const LinkButton = styled.a`
 
 const Certifications = ({ theme }) => {
   return (
-    <Section theme={theme}>
-      <SectionTitle theme={theme}>Certifications</SectionTitle>
+    <Section theme={theme} id="certifications">
+      <SectionTitle theme={theme}>Professional Development</SectionTitle>
       <CardContainer>
         {certifications.map((certificate, index) => (
           <Card

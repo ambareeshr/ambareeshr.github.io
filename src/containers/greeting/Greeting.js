@@ -22,7 +22,7 @@ const GreetingContainer = styled.div`
 
 const TextContainer = styled(motion.div)`
   flex: 1;
-  max-width: 600px;
+  max-width: 800px;
   margin-right: 40px;
   @media (max-width: 1200px) {
     margin-right: 0;
@@ -60,6 +60,12 @@ const Subtitle = styled.p`
   padding: 20px;
   border-radius: 10px;
   margin: 0;
+  width: 100%;
+  text-align: left;
+
+  @media (max-width: 1200px) {
+    text-align: center;
+  }
 `;
 
 const HighlightSpan = styled.span`
@@ -319,25 +325,6 @@ const Greeting = ({ theme }) => {
           </SubtitleContainer>
           <SocialMedia theme={theme} />
         </TextContainer>
-        <ImageContainer
-          initial={{ opacity: 0, scale: 0.8 }}
-          animate={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 0.8, delay: 0.4, ease: "easeOut" }}
-          onClick={() => setIsModalOpen(true)}
-        >
-          <FeelingProud theme={theme} />
-          <PulsingDot
-            animate={{
-              scale: [1, 1.2, 1],
-              opacity: [1, 0.5, 1],
-            }}
-            transition={{
-              duration: 2,
-              repeat: Infinity,
-              repeatType: "reverse",
-            }}
-          />
-        </ImageContainer>
       </GreetingContainer>
 
       <AnimatePresence>

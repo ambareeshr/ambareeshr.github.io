@@ -4,6 +4,7 @@ import Home from "./sections/home";
 import Contact from "./sections/contact";
 import Footer from "./shared/footer/Footer";
 import TopButton from "./shared/topButton/TopButton";
+import SectionNav from "./shared/sectionNav/SectionNav";
 import Education from "./sections/education";
 import Experience from "./sections/experience";
 import {Awards} from "./sections/awards";
@@ -20,7 +21,7 @@ export default class Main extends Component {
     return (
         <div>
             <Home theme={this.props.theme} />
-            <Skills theme={this.props.theme} /> 
+            <Skills theme={this.props.theme} />
             <Patents theme={this.props.theme} />
             <Publications theme={theme} />
             <Education theme={this.props.theme} />
@@ -31,6 +32,7 @@ export default class Main extends Component {
             <Contact theme={this.props.theme} />
             <Footer theme={this.props.theme} />
             <TopButton theme={this.props.theme} />
+            <SectionNav theme={this.props.theme} />
         </div>
       );
     }

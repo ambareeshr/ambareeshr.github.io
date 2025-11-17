@@ -18,13 +18,17 @@ const SectionTitle = styled.h2`
 
 const PatentsContainer = styled.div`
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-columns: repeat(2, 1fr);
   gap: 30px;
   max-width: 1200px;
   margin: 0 auto;
+
+  @media (max-width: 768px) {
+    grid-template-columns: 1fr;
+  }
 `;
 
-const PatentCard = styled.div`
+const PatentCard = styled.a`
   background-color: #ffffff;
   border-radius: 8px;
   padding: 30px;
@@ -33,8 +37,34 @@ const PatentCard = styled.div`
   display: flex;
   flex-direction: column;
   position: relative;
+  text-decoration: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+
   &:hover {
     box-shadow: 0 15px 30px rgba(0,0,0,0.2);
+    transform: translateY(-3px);
+  }
+
+  &:hover::after {
+    content: 'View Patent';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(3, 102, 214, 0.95);
+    color: white;
+    padding: 12px 24px;
+    border-radius: 6px;
+    font-size: 16px;
+    font-weight: 600;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    z-index: 10;
+    pointer-events: none;
+  }
+
+  &:hover > * {
+    opacity: 0.3;
   }
 `;
 
@@ -97,7 +127,7 @@ const Patents = ({ theme }) => {
         <PatentsContainer>
           {patents.map((patent, index) => (
             <Fade key={index} bottom duration={1000} distance="20px">
-              <PatentCard>
+              <PatentCard href={patent.link} target="_blank" rel="noopener noreferrer">
                 <FiledBadge>Filed</FiledBadge>
                 <PatentIcon />
                 <PatentTitle>{patent.title}</PatentTitle>
