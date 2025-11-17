@@ -6,7 +6,7 @@ export const greeting = {
   title: "Ambareesh Ramakrishnan",
   logo_name: "Ambareesh",
   subTitle:
-  "Senior Software Engineer passionate about building AI-powered applications and scalable systems. Experienced in full-stack development, machine learning, and data engineering. Always eager to tackle complex challenges and drive innovation in tech.",
+  "Senior Software Engineer at Visa working on Generative AI Platform. MS in Computer Science from Oregon State University. Passionate about building AI-powered solutions, scalable platforms, and innovative tools.",
 };
 
 export const socialMediaLinks = [
@@ -26,7 +26,7 @@ export const socialMediaLinks = [
   },
   {
     name: "Gmail",
-    link: "mailto:rambareeshceg@gmail.com",
+    link: "mailto:ambareeshus@gmail.com",
     icon: FaEnvelope,
     fontAwesomeIcon: "fa-google",
     backgroundColor: "#D14836",
@@ -101,20 +101,20 @@ export const old_skills = {
 
 export const skills = [
   {
+    category: "Generative AI",
+    items: ["Azure OpenAI", "LangChain", "Agentic Workflows", "Neural Retrieval", "RAG", "Prompt Engineering"]
+  },
+  {
     category: "Languages & Frameworks",
-    items: ["Python", ".NET", "Angular", "Java", "JavaScript",, "C#", "React", "Node.js", "Spring Boot"]
+    items: [".NET", "Angular", "C#", "C++", "Flask", "Kotlin", "JavaScript", "Python", "PyTorch"]
   },
   {
     category: "Databases & Big Data",
-    items: ["SQL", "MongoDB", "Redis", "Kafka", "Spark", "Snowflake"]
+    items: ["Azure Storage", "MongoDB", "Redis", "SQL Server", "SSAS", "PySpark"]
   },
   {
-    category: "Cloud & DevOps",
-    items: ["AWS", "Azure", "Docker", "Kubernetes", "CI/CD", "Git"]
-  },
-  {
-    category: "AI & Machine Learning",
-    items: ["TensorFlow", "PyTorch", "Scikit-learn", "NLP", "Computer Vision", "Deep Learning"]
+    category: "Cloud/DevOps/Tools",
+    items: ["AWS", "Azure", "Azure AI Search", "Git", "Power Automate", "PowerBI", "Selenium", "Visual Studio"]
   }
 ];
 
@@ -143,34 +143,44 @@ export const degrees = {
   degrees: [
     {
       title: "Oregon State University",
-      subtitle: "Master of Science in Computer Science",
+      subtitle: "Master of Science in Computer Science with AI Concentration",
       logo_path: "osu_logo.jpg",
       alt_name: "OSU",
-      duration: "Sep 2023 - Present",
+      duration: "Sep 2023 - March 2025",
       location: "Corvallis, Oregon, USA",
       cgpa: "4/4",
       descriptions: [
-        "⚡ Developing <b>AI Cortex</b>, an OpenAI-funded project leveraging GPT-3.5 Turbo to optimize CI/CD workflows in GitHub Actions through interactive visualization and inefficiency resolution.",
-        "⚡ Designed <b><a href='https://www.figma.com/proto/P3T4RYPQaq9H3GsSKLkdfi/Lullabyte?node-id=2095-3591&t=LJYRBQcsxcadq9Ju-1'>Lullabyte</a></b>, a sleep-tracking figma prototype with HCI principles and inclusive design. Conducted UX research including user journey mapping and heuristic evaluations.",
-        `⚡ <b><a href= '/pdfs/Deep_Unlearning.pdf'} target='_blank'>Deep Unlearning</a></b> - Conducted research on deep unlearning techniques across diverse neural network architectures, focusing on model forgetfulness while maintaining accuracy for privacy-compliant AI systems. This introduces a novel comparison method for unlearning algorithms.`,
-        `⚡ <b><a href= '/pdfs/Final_Report.pdf'} target='_blank'>Automatic Code Documentation with Transformers</a></b> - Developed an innovative hybrid architecture combining language-trained encoder and decoder for code summarization, showing potential for enhanced documentation with larger datasets and further fine-tuning.`
+        "⚡ <b>AI Cortex - CI/CD Pipeline Optimizer</b>: Built a hybrid RAG system for GitHub Actions using semantic search and dense retrieval. Implemented agentic workflows with custom function tools for real-time analysis, achieving 92% accuracy in identifying pipeline inefficiencies across 1000+ workflows.",
+        "⚡ <b>AID (Automated Inclusivity Detector)</b>: Developed an AI-powered system to detect inclusivity issues in MOSIP's platform applications, integrating GenderMag data and multi-modal prompting for UI analysis. Achieved 78% accuracy in identifying cognitive-bias issues through RAG-based analysis.",
+        "⚡ <b>Advanced Prompting Strategies</b>: Implemented specialized techniques including graph-based prompting for YAML serialization, self-consistency prompting for diverse bug detection, and chain-of-thought reasoning with few-shot learning. Improved overall suggestion accuracy from 45% to 86%.",
+        "⚡ <b>Feedback-Driven Optimization</b>: Designed an automatic prompt refinement system based on user interactions and feedback metrics, reducing false positives by 32%. Contributing to research on creating LLM with goal maintenance loops.",
+        `⚡ <b><a href='/pdfs/Deep_Unlearning.pdf' target='_blank'>Deep Unlearning</a></b> - Conducted research comparing Amnesiac, Knowledge Transfer, and Impair Repair-based unlearning across CNN, ResNet-18, and ViT. Developed novel comparison metrics for privacy-compliant AI systems.`,
+        `⚡ <b><a href='/pdfs/Final_Report.pdf' target='_blank'>Automatic Code Documentation</a></b> - Created hybrid Transformer architecture combining code-trained encoder and language decoder for code summarization. Improved performance through end-to-end training on code docstring datasets.`
       ],
       points: [
         {
-          "title": "AI Cortex",
-          "content": "an OpenAI-funded project leveraging GPT-3.5 Turbo to optimize CI/CD workflows in GitHub Actions through interactive visualization and inefficiency resolution."
+          "title": "AI Cortex - CI/CD Pipeline Optimizer",
+          "content": "Built a hybrid RAG system for GitHub Actions using semantic search and dense retrieval. Implemented agentic workflows with custom function tools for real-time analysis, achieving 92% accuracy in identifying pipeline inefficiencies across 1000+ workflows (React, Node.js, OpenAI API, LangChain, GitHub API)"
         },
         {
-          "title": "Lullabyte",
-          "content": "<b><a href='https://www.figma.com/proto/P3T4RYPQaq9H3GsSKLkdfi/Lullabyte?node-id=2095-3591&t=LJYRBQcsxcadq9Ju-1'>Lullabyte</a></b> - Sleep-tracking figma prototype with HCI principles and inclusive design. Conducted UX research including user journey mapping and heuristic evaluations."
+          "title": "AID (Automated Inclusivity Detector)",
+          "content": "Developed an AI-powered system to detect inclusivity issues in MOSIP's platform applications, integrating GenderMag data and multi-modal prompting for UI analysis. Achieved 78% accuracy in identifying cognitive-bias issues through RAG-based analysis. (Python, OpenAI, AWS Bedrock, ChromaDB, Redis)"
+        },
+        {
+          "title": "Advanced Prompting Strategies",
+          "content": "Implemented specialized techniques including graph-based prompting for YAML serialization, self-consistency prompting for diverse bug detection, and chain-of-thought reasoning with few-shot learning. Improved overall suggestion accuracy from 45% to 86%."
+        },
+        {
+          "title": "Feedback-Driven Optimization",
+          "content": "Designed an automatic prompt refinement system based on user interactions and feedback metrics, reducing false positives by 32%. Contributing to research on creating LLM with goal maintenance loops."
         },
         {
           "title": "Deep Unlearning",
-          "content": "<b><a href= '/pdfs/Deep_Unlearning.pdf'} target='_blank'>Deep Unlearning</a></b> - Conducted research on deep unlearning techniques across diverse neural network architectures, focusing on model forgetfulness while maintaining accuracy for privacy-compliant AI systems. This introduces a novel comparison method for unlearning algorithms."
+          "content": "<b><a href='/pdfs/Deep_Unlearning.pdf' target='_blank'>Deep Unlearning</a></b> - Conducted research comparing Amnesiac, Knowledge Transfer, and Impair Repair-based unlearning across CNN, ResNet-18, and ViT. Developed novel comparison metrics for privacy-compliant AI systems."
         },
         {
           "title": "Automatic Code Documentation",
-          "content": "<b><a href= '/pdfs/Final_Report.pdf'} target='_blank'>Automatic Code Documentation with Transformers</a></b> - Developed an innovative hybrid architecture combining language-trained encoder and decoder for code summarization, showing potential for enhanced documentation with larger datasets and further fine-tuning."
+          "content": "<b><a href='/pdfs/Final_Report.pdf' target='_blank'>Automatic Code Documentation</a></b> - Created hybrid Transformer architecture combining code-trained encoder and language decoder for code summarization."
         }
       ],
       website_link: "https://oregonstate.edu/",
@@ -217,11 +227,66 @@ export const degrees = {
 export const experience = [
   {
     company: "Visa Inc.",
+    role: "Senior Software Engineer - Generative AI Platform",
+    duration: "April 2025 - Present",
+    location: "Austin, Texas, USA",
+    logo_path: "visa_transparent.png",
+    oneLineDescription:"Building next-generation AI-powered platforms and tools to transform enterprise software development and operations.",
+    projects: [
+      {
+        title: "Generative AI Platform Development",
+        description: "Architecting and developing scalable GenAI platform infrastructure to enable AI-powered solutions across Visa's enterprise applications.",
+        technologies: ["Python", "Azure OpenAI", "LangChain", "Kubernetes", "Azure"],
+        categories: ["AI", "Platform Engineering"],
+        impact: "Enabling enterprise-wide AI adoption and innovation"
+      }
+    ]
+  },
+  {
+    company: "Oregon State University",
+    role: "Research Assistant",
+    duration: "Sep 2023 - March 2025",
+    location: "Corvallis, Oregon, USA",
+    logo_path: "osu_logo.jpg",
+    oneLineDescription:"Developed AI-powered tools for CI/CD optimization and inclusivity detection using advanced RAG systems and prompt engineering techniques.",
+    projects: [
+      {
+        title: "AI Cortex - CI/CD Pipeline Optimizer",
+        description: "Built a hybrid RAG system for GitHub Actions using semantic search and dense retrieval. Implemented agentic workflows with custom function tools for real-time analysis.",
+        technologies: ["React", "Node.js", "OpenAI API", "LangChain", "GitHub API"],
+        categories: ["AI", "DevOps", "RAG"],
+        impact: "Achieved 92% accuracy in identifying pipeline inefficiencies across 1000+ workflows"
+      },
+      {
+        title: "AID (Automated Inclusivity Detector)",
+        description: "Developed an AI-powered system to detect inclusivity issues in MOSIP's platform applications, integrating GenderMag data and multi-modal prompting for UI analysis.",
+        technologies: ["Python", "OpenAI", "AWS Bedrock", "ChromaDB", "Redis"],
+        categories: ["AI", "Inclusivity", "RAG"],
+        impact: "Achieved 78% accuracy in identifying cognitive-bias issues through RAG-based analysis"
+      },
+      {
+        title: "Advanced Prompting Strategies",
+        description: "Implemented specialized techniques including graph-based prompting for YAML serialization, self-consistency prompting for diverse bug detection, and chain-of-thought reasoning with few-shot learning.",
+        technologies: ["Python", "OpenAI", "Prompt Engineering"],
+        categories: ["AI", "Research"],
+        impact: "Improved overall suggestion accuracy from 45% to 86%"
+      },
+      {
+        title: "Feedback-Driven Optimization",
+        description: "Designed an automatic prompt refinement system based on user interactions and feedback metrics, contributing to research on creating LLM with goal maintenance loops.",
+        technologies: ["Python", "Machine Learning", "LLM"],
+        categories: ["AI", "Research"],
+        impact: "Reduced false positives by 32%"
+      }
+    ]
+  },
+  {
+    company: "Visa Inc.",
     role: "Senior Software Engineer",
-    duration: "June 2019 - Aug 2023",
+    duration: "July 2019 - Aug 2023",
     location: "Bangalore, India",
     logo_path: "visa_transparent.png",
-    oneLineDescription:"Managed 10+ applications, streamlining processes and optimizing DevOps workflows by 20%. Conducted security assessments, resolving 35+ critical vulnerabilities.",
+    oneLineDescription:"Led development teams, architected scalable platforms, and optimized systems, saving $250K annually and resolving 35+ critical vulnerabilities.",
     projects: [
       /*
       {
@@ -234,69 +299,46 @@ export const experience = [
       */
       {
         title: "Data Governance Platform",
-        description: "Architected, designed, and led a team of 5 in developing the Data Governance Platform, enabling real-time data analytics, automated data validation, and end-to-end data lineage.",
-        technologies: ["Java", "Angular", "MongoDB", "Data Analytics"],
-        categories: ["Data Engineering", "Full Stack", "AI"],
-        impact: "Increased data accuracy by 30% across Visa products"
-      },
-      {
-        title: "Smart Recommender System",
-        description: "Developed a Smart Recommender using NLP and Azure OpenAI, improving candidate selection efficiency.",
-        technologies: ["NLP", "Azure OpenAI", "Machine Learning"],
-        categories: ["AI", "Data Engineering"],
-        impact: "Improved candidate selection efficiency by 60%, generating AI-crafted explanations for suitability"
-      },
-      {
-        title: "Enterprise Data Archival and Retrieval System (EDARS)",
-        description: "Implemented an Enterprise Data Archival and Retrieval platform using Angular, Kotlin, and MongoDB.",
-        technologies: ["Angular", "Kotlin", "MongoDB"],
-        categories: ["Full Stack", "Data Engineering"],
-        impact: "Saved Visa $250,000 annually in license costs"
-      },
-      {
-        title: "Visa Web Application Framework",
-        description: "Key contributor to the Visa Web Application Framework, which expedited the development time of new apps. Developed modules for authentication, caching, encryption, scaffolding, DevOps, and various UI components.",
-        technologies: ["Angular", "DevOps", "Authentication", "Caching"],
-        categories: ["Full Stack", "Developer Tools"],
-        impact: "Cut development time by 70% with many scaffolded components"
-      },
-      {
-        title: "Employee Referral Tool",
-        description: "Key contributor to the Employee Referral Tool leveraging NLP, automating the referral process.",
-        technologies: ["NLP", "Machine Learning", "Angular"],
-        categories: ["AI", "Full Stack"],
-        impact: "Automated 90% of the referral process, reducing processing time by 50%"
+        description: "Architected and led a team of 5, enabling automated data validation with real-time notification and secure role-based access controls, and data archival/retrieval.",
+        technologies: ["Angular", ".NET 6", "Kotlin", "SQL", "MongoDB", "PowerBI"],
+        categories: ["Data Engineering", "Full Stack"],
+        impact: "Reduced data correction time by 70% across Visa HR products and saved $250,000 annually in license costs"
       },
       {
         title: "Integration Hub",
-        description: "Served as tech lead for the India team, managing 20+ client integrations, optimizing pipeline performance, and implementing centralized logging and automated token authorization workflow for onboarding.",
-        technologies: ["BizTalk", "C#", ".NET", "Automation"],
+        description: "Served as tech lead for the India team, managing 10+ client integrations, optimizing performance, and implementing centralized logging and automated token authorization.",
+        technologies: ["Microsoft BizTalk", ".NET", "Scripting", "MSSQL"],
         categories: ["Integration", "Performance Optimization"],
-        impact: "Optimized throughput by 40%"
+        impact: "Optimized throughput and improved system reliability"
+      },
+      {
+        title: "AI Chatbot",
+        description: "Contributed to the development of an HR chatbot proof-of-concept using Azure AI services (QnA Maker and Azure OpenAI) to automate responses to common HR queries.",
+        technologies: [".NET", "Azure Storage", "Angular", "SQL"],
+        categories: ["AI", "Full Stack"],
+        impact: "Automated responses to common HR queries improving employee experience"
+      },
+      {
+        title: "Visa Web Application Framework",
+        description: "Key contributor to VWAF, which significantly reduced development time of new applications. Developed modules for authentication, caching, encryption, CRUD scaffolding, DevOps, and UI components.",
+        technologies: ["Angular", ".NET", "DevOps", "Authentication"],
+        categories: ["Full Stack", "Developer Tools"],
+        impact: "Significantly reduced development time for new applications"
       },
       {
         title: "Cube Performance Optimization",
-        description: "Boosted PowerBI dashboard performance by optimizing OLAP cubes, range-based queries, and measures, alongside efficient ETL pipelines and snowflake schema design.",
-        technologies: ["PowerBI", "OLAP", "Data Optimization"],
+        description: "Achieved a 150% increase in PowerBI dashboard performance by optimizing OLAP cubes, implementing efficient ETL pipelines, and designing snowflake schemas.",
+        technologies: ["SSAS", "DAX", "M", "SQL"],
         categories: ["Data Engineering", "Performance Optimization"],
-        impact: "Achieved 150% decrease in dashboard loading time"
+        impact: "Achieved a 150% increase in PowerBI dashboard performance"
       },
       {
-        title: "Test Automation Tool",
-        description: "Created a .NET-based test suite for writing, running, and scheduling test cases with interactive analytics dashboards.",
-        technologies: [".NET", "C#", "Test Automation", "Analytics"],
-        categories: ["QA & Testing", "Developer Tools"],
-        impact: "Ensured tool adoption with internal teams like Visa Activity Monitoring"
-      }
-      /*,
-      {
         title: "Application Management and Optimization",
-        description: "Managed 10+ applications, streamlining processes and optimizing DevOps workflows. Conducted security assessments, resolving critical vulnerabilities.",
-        technologies: ["DevOps", "Security", "Application Management"],
+        description: "Managed 5+ applications, streamlining processes and optimizing DevOps workflows by 20%. Conducted security assessments, resolving 35+ critical vulnerabilities.",
+        technologies: ["Azure DevOps", "VVMS", "Security"],
         categories: ["DevOps", "Security"],
         impact: "Optimized DevOps workflows by 20%, resolved 35+ critical vulnerabilities"
       }
-        */
     ]
   }
   /*,
@@ -413,35 +455,47 @@ export const projects = [
 
 export const publications = [
   {
-    title: "Secure BNPL for B2B",
-    description: "Defensive Publication on a system and method for providing Secure BNPL for B2B using federated blockchain and Deep Learning.",
-    link: "https://www.tdcommons.org/dpubs_series/5677/",
-    coAuthors: ["Shruti Dahiya"]
+    title: "Insights from the Frontline: GenAI Utilization Among Software Engineering Students",
+    description: "Conference Publication accepted at ICSE - CSEE&T 2025 (Acceptance Rate: 12%). Research on how software engineering students utilize Generative AI tools in their learning and development processes.",
+    link: "#",
+    type: "Conference",
+    venue: "ICSE - CSEE&T 2025",
+    coAuthors: []
   },
   {
-    title: "Distribution Channels for Merchants",
-    description: "Defensive Publication on Recommendation of Distribution Channels for Merchants using Machine Learning and VisaNet data.",
-    link: "https://www.tdcommons.org/dpubs_series/6071/",
-    coAuthors: ["Shruti Dahiya", "Swathykrishnan K Chandran"]
+    title: "Rumor Stance and Veracity Determination using Siamese Bi-LSTM and Knowledge Graph",
+    description: "Bachelor's Thesis published paper achieving 87% accuracy on the Stanford NLI dataset (Ranked top 1% in SemEval).",
+    link: "#",
+    type: "Thesis",
+    venue: "SemEval RumorEval",
+    coAuthors: []
   }
 ];
 export const achievements = [
   {
-    title: "Visa Above and Beyond Awards",
-    description: "Received multiple times for exceptional performance and leadership.",
-    image_path: "visa_award.png",
-  },
-  {
     title: "Technical Innovation Awards",
-    description: "For implementing AI-powered Employee Referral, Automatic Anomaly Detection, and ideating Fleet price prediction.",
-    image_path: "innovation_award.png",
+    description: "Received 5+ Technical Innovation Awards for contributing to AI Referral, Automatic Anomaly Detection, and Fleet price prediction, recognized as intellectual properties by Visa.",
+    year: "2019-2023",
+    category: "Innovation"
   },
   {
-    title: "Publications",
-    description: "Co-authored Defensive Publications on 'System and method for providing Secure BNPL for B2B' and 'Recommendation of Distribution Channels for Merchants'.",
-    image_path: "publication.png",
+    title: "Visa Above & Beyond Awards",
+    description: "Led dev teams across multiple projects, mentoring junior engineers and new hires through regular code reviews and knowledge sharing sessions.",
+    year: "2019-2023",
+    category: "Leadership"
   },
-  // Add more achievements as needed
+  {
+    title: "Bachelor's Thesis - Top 1% in SemEval",
+    description: "Published paper on \"Rumor Stance and Veracity Determination using Siamese Bi-LSTM and Knowledge Graph\", achieving 87% accuracy on the Stanford NLI dataset (Ranked top 1% in SemEval).",
+    year: "2019",
+    category: "Research"
+  },
+  {
+    title: "Microsoft Hackathon 2017 - Runner-up",
+    description: "Developed an emotion detection application using Azure, selected as one of top three projects at university's innovation exhibition.",
+    year: "2017",
+    category: "Competition"
+  }
 ];
 
 
@@ -449,18 +503,43 @@ export const patents = [
   {
     title: "Secure Authentication Using Software Application",
     number: "PCT/US2023/075209",
-    status: "Filed",
-    date: "Dec 19, 2023",
+    status: "Published",
+    type: "Patent",
+    date: "Filed Dec 19, 2023",
     description: "A novel approach to secure authentication in software applications, enhancing user security while maintaining a seamless user experience.",
-    coAuthors: ["Shruti Dahiya", "Swathykrishnan K Chandran"]
+    link: "https://patents.google.com/patent/WO2025071588A1",
+    coAuthors: ["Shruti Dahiya (Senior Manager)", "Swathykrishnan K Chandran"]
   },
   {
-    title: "Detection Of XSS Attacks Using Deep Learning Models",
+    title: "Detection Of Cross-Side Scripting Attacks Using Deep Learning Models",
     number: "PCT/US2024/042106",
-    status: "Filed",
-    date: "Sep 17, 2024",
+    status: "Published",
+    type: "Patent",
+    date: "Filed Sep 17, 2024",
     description: "An innovative method for detecting Cross-Site Scripting (XSS) attacks using advanced deep learning models, significantly improving web application security.",
-    coAuthors: ["Shruti Dahiya", "Swathykrishnan K Chandran"]  },
+    link: "https://patents.google.com/patent/WO2025038634A1",
+    coAuthors: ["Shruti Dahiya (Senior Manager)", "Swathykrishnan K Chandran"]
+  },
+  {
+    title: "Secure Buy Now Pay Later (BNPL) for B2B",
+    number: "Defensive Publication 5677",
+    status: "Published",
+    type: "Defensive Publication",
+    date: "Published 2023",
+    description: "Defensive Publication on secure BNPL for B2B using federated blockchain and Deep Learning methods.",
+    link: "https://www.tdcommons.org/dpubs_series/5677/",
+    coAuthors: ["Shruti Dahiya (Senior Manager)"]
+  },
+  {
+    title: "Recommendation of Distribution Channels for Merchants",
+    number: "Defensive Publication 6071",
+    status: "Published",
+    type: "Defensive Publication",
+    date: "Published 2023",
+    description: "Defensive Publication using Machine Learning techniques and VisaNet data for merchant channel recommendations.",
+    link: "https://www.tdcommons.org/dpubs_series/6071/",
+    coAuthors: ["Shruti Dahiya (Senior Manager)", "Swathykrishnan K Chandran"]
+  }
 ];
 
 export const recommendations = [

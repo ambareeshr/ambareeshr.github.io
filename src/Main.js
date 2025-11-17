@@ -4,13 +4,15 @@ import Home from "./sections/home";
 import Contact from "./sections/contact";
 import Footer from "./shared/footer/Footer";
 import TopButton from "./shared/topButton/TopButton";
-import Education from "./sections/education";
-import Experience from "./sections/experience";
-import {Awards} from "./sections/awards";
-import Publications from "./sections/publications";
-import Certifications from "./sections/certifications";
-import Patents from "./sections/patents";
-import Skills from "./containers/skills/Skills";
+import SectionNav from "./shared/sectionNav/SectionNav";
+import EducationMinimal from "./sections/education_minimal";
+import ExperienceMinimal from "./sections/experience_minimal";
+import {Awards} from "./sections/awards_minimal";
+import PublicationsMinimal from "./sections/publications_minimal";
+import CertificationsMinimal from "./sections/certifications_minimal";
+import PatentsMinimal from "./sections/patents_minimal";
+import SkillsMinimal from "./containers/skills/SkillsMinimal";
+import RecommendationsMinimal from "./sections/recommendations_minimal";
 
 
 export default class Main extends Component {
@@ -18,16 +20,18 @@ export default class Main extends Component {
     const theme = this.props.theme;
     console.log(theme);
     return (
-        <div>
+        <div style={{ background: theme.body }}>
+            <SectionNav theme={this.props.theme} />
             <Home theme={this.props.theme} />
-            <Skills theme={this.props.theme} /> 
-            <Patents theme={this.props.theme} />
-            <Publications theme={theme} />
-            <Education theme={this.props.theme} />
-            <Experience theme={this.props.theme} />
+            <SkillsMinimal theme={this.props.theme} />
+            <ExperienceMinimal theme={this.props.theme} />
+            <PatentsMinimal theme={this.props.theme} />
+            <PublicationsMinimal theme={theme} />
+            <EducationMinimal theme={this.props.theme} />
             {/*<Projects theme={theme} />*/}
-            {/*<Awards theme={theme} />*/}
-            <Certifications theme={this.props.theme} />
+            <Awards theme={this.props.theme} />
+            <CertificationsMinimal theme={this.props.theme} />
+            <RecommendationsMinimal theme={this.props.theme} />
             <Contact theme={this.props.theme} />
             <Footer theme={this.props.theme} />
             <TopButton theme={this.props.theme} />

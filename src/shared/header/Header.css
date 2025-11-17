@@ -53,6 +53,9 @@
   clear: both;
   max-height: 0;
   transition: max-height 0.2s ease-out;
+  z-index: 1001;
+  position: relative;
+  background-color: inherit;
 }
 
 /* menu icon */
@@ -101,7 +104,7 @@
 }
 
 .header .menu-btn:checked ~ .menu {
-  max-height: 370px;
+  max-height: 600px;
 }
 
 .header .menu-btn:checked ~ .menu-icon .navicon {

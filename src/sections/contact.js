@@ -1,12 +1,21 @@
 import React from "react";
 import styled from 'styled-components';
 import { Fade } from "react-reveal";
+import { motion } from 'framer-motion';
 import SocialMedia from "../components/socialMedia/SocialMedia.js";
 import { contactPageData } from "../myData.js";
+import profilePic from '../android-chrome-512x512.png';
 
 const ContactContainer = styled.div`
-  background: ${props => `linear-gradient(135deg, ${props.theme.body} 0%, ${props.theme.highlightLight} 100%)`};
-  padding: 5rem 0;
+  background: ${props => props.theme.body};
+  padding: 8rem 10%;
+  min-height: 60vh;
+  display: flex;
+  align-items: center;
+
+  @media (max-width: 768px) {
+    padding: 6rem 5%;
+  }
 `;
 
 const ContentWrapper = styled.div`
@@ -14,137 +23,127 @@ const ContentWrapper = styled.div`
   margin: 0 auto;
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  padding: 0 2rem;
+  gap: 4rem;
 
   @media (max-width: 768px) {
     flex-direction: column;
     text-align: center;
+    gap: 2rem;
   }
 `;
 
 const TextContent = styled.div`
   flex: 1;
-  padding-right: 2rem;
 
   @media (max-width: 768px) {
     padding-right: 0;
-    margin-bottom: 2rem;
+    margin-bottom: 0;
   }
 `;
 
-const Title = styled.h1`
-  font-size: 2.5rem;
-  color: ${props => props.theme.text};
+const SectionNumber = styled.div`
+  font-family: ${props => props.theme.fontMono};
+  font-size: 0.75rem;
+  font-weight: 500;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: ${props => props.theme.tertiaryText};
   margin-bottom: 1rem;
-  position: relative;
+`;
 
-  &:after {
-    content: '';
-    position: absolute;
-    left: 0;
-    bottom: -0.5rem;
-    width: 3rem;
-    height: 0.25rem;
-    background-color: ${props => props.theme.highlight};
-
-    @media (max-width: 768px) {
-      left: 50%;
-      transform: translateX(-50%);
-    }
-  }
+const Title = styled.h1`
+  font-size: clamp(2.5rem, 6vw, 4rem);
+  font-weight: 700;
+  line-height: 1.1;
+  color: ${props => props.theme.text};
+  margin: 0 0 1.5rem 0;
+  letter-spacing: -0.03em;
 `;
 
 const Description = styled.p`
   font-size: 1.1rem;
+  line-height: 1.8;
   color: ${props => props.theme.secondaryText};
-  margin-bottom: 2rem;
-`;
+  margin-bottom: 3rem;
+  max-width: 600px;
 
-const EmailLink = styled.a`
-  font-size: 1.2rem;
-  color: ${props => props.theme.highlight};
-  text-decoration: none;
-  position: relative;
-  
-  &:after {
-    content: '';
-    position: absolute;
-    width: 100%;
-    height: 2px;
-    bottom: -4px;
-    left: 0;
-    background-color: ${props => props.theme.highlight};
-    transform: scaleX(0);
-    transition: transform 0.3s ease-in-out;
-  }
-
-  &:hover:after {
-    transform: scaleX(1);
+  @media (max-width: 768px) {
+    margin-left: auto;
+    margin-right: auto;
   }
 `;
 
-const ImageContainer = styled.div`
-  flex: 1;
+const SocialMediaWrapper = styled.div`
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
-  position: relative;
+
+  @media (max-width: 768px) {
+    justify-content: center;
+  }
 `;
 
-const StyledImage = styled.img`
-  width: 300px;
-  height: 300px;
+const ProfilePhotoContainer = styled(motion.div)`
+  width: 200px;
+  height: 200px;
   border-radius: 50%;
+  border: 3px solid ${props => props.theme.divider};
+  background: ${props => props.theme.cardBg};
+  overflow: hidden;
+  flex-shrink: 0;
+  transition: ${props => props.theme.transition};
+
+  &:hover {
+    border-color: ${props => props.theme.text};
+    transform: scale(1.05);
+    box-shadow: ${props => props.theme.cardHoverShadow};
+  }
+
+  @media (max-width: 768px) {
+    width: 150px;
+    height: 150px;
+  }
+`;
+
+const ProfileImage = styled.img`
+  width: 100%;
+  height: 100%;
   object-fit: cover;
-  border: 4px solid ${props => props.theme.highlight};
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  filter: grayscale(100%);
+  transition: filter 0.3s ease;
+
+  ${ProfilePhotoContainer}:hover & {
+    filter: grayscale(0%);
+  }
 `;
-
-const BackgroundCircle = styled.div`
-  position: absolute;
-  width: 350px;
-  height: 350px;
-  border-radius: 50%;
-  background: ${props => props.theme.highlightLight};
-  opacity: 0.3;
-  z-index: -1;
-`;
-
-const ContactContent = ({ theme }) => (
-  <TextContent>
-    <Title theme={theme}>Let's Connect!</Title>
-    <Description theme={theme}>
-      I'm always excited to collaborate on innovative projects, exchange creative ideas, or explore opportunities to contribute to your vision.
-    </Description>
-    <SocialMedia theme={theme} />
-    {/*<div style={{ marginTop: '2rem' }}>
-      <Description theme={theme}>Prefer email? Reach out at:</Description>
-      <EmailLink href="mailto:xxxx@gmail.com" theme={theme}>
-        xxxx@gmail.com
-      </EmailLink>
-    </div>*/}
-  </TextContent>
-);
-
-const ContactImage = ({ theme }) => (
-  <ImageContainer>
-    <BackgroundCircle theme={theme} />
-    <StyledImage 
-      src={require(`../android-chrome-512x512.png`)}
-      alt="Ambareesh R" 
-      theme={theme}
-    />
-  </ImageContainer>
-);
 
 const Contact = ({ theme }) => {
   return (
     <ContactContainer theme={theme} id="contact">
       <Fade bottom duration={1000} distance="40px">
         <ContentWrapper>
-          <ContactContent theme={theme} />
-          <ContactImage theme={theme} />
+          <TextContent>
+            <SectionNumber theme={theme}>09 — Contact</SectionNumber>
+            <Title theme={theme}>Let's Connect</Title>
+            <Description theme={theme}>
+              Open to discussing innovative projects, collaboration opportunities, or just connecting with fellow tech enthusiasts.
+            </Description>
+            <SocialMediaWrapper>
+              <SocialMedia theme={theme} />
+            </SocialMediaWrapper>
+          </TextContent>
+          <ProfilePhotoContainer
+            theme={theme}
+            initial={{ opacity: 0, scale: 0.8 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{
+              duration: 0.6,
+              delay: 0.3,
+              ease: [0.4, 0, 0.2, 1]
+            }}
+          >
+            <ProfileImage src={profilePic} alt="Profile" />
+          </ProfilePhotoContainer>
         </ContentWrapper>
       </Fade>
     </ContactContainer>

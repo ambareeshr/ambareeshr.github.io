@@ -6,14 +6,35 @@ import { FaAward, FaUsers } from 'react-icons/fa';
 
 const PatentsSection = styled.div`
   background-color: ${props => props.theme.body};
+  padding: 5rem 6%;
+
+  @media (max-width: 768px) {
+    padding: 3rem 5%;
+  }
 `;
 
 const SectionTitle = styled.h2`
-  font-size: 32px;
-  color: #2c3e50;
-  margin-bottom: 24px;
+  font-size: 2.5rem;
+  font-weight: 700;
   text-align: center;
-  font-weight: bold;
+  margin-bottom: 1rem;
+  background: ${props => props.theme.gradient || 'linear-gradient(135deg, #6366F1 0%, #8B5CF6 50%, #EC4899 100%)'};
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+
+  @media (max-width: 768px) {
+    font-size: 2rem;
+  }
+`;
+
+const SectionSubtitle = styled.p`
+  text-align: center;
+  color: ${props => props.theme.secondaryText};
+  font-size: 1.1rem;
+  max-width: 600px;
+  margin: 0 auto 3rem;
+  line-height: 1.6;
 `;
 
 const PatentsContainer = styled.div`
@@ -25,43 +46,58 @@ const PatentsContainer = styled.div`
 `;
 
 const PatentCard = styled.div`
-  background-color: #ffffff;
-  border-radius: 8px;
-  padding: 30px;
+  background: ${props => props.theme.cardBg || '#FFFFFF'};
+  border-radius: 16px;
+  padding: 2rem;
   width: 100%;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  box-shadow: ${props => props.theme.cardShadow || '0 4px 6px -1px rgba(0, 0, 0, 0.1)'};
   display: flex;
   flex-direction: column;
   position: relative;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  border: 1px solid rgba(99, 102, 241, 0.1);
+
   &:hover {
-    box-shadow: 0 15px 30px rgba(0,0,0,0.2);
+    transform: translateY(-8px);
+    box-shadow: ${props => props.theme.cardHoverShadow || '0 20px 25px -5px rgba(0, 0, 0, 0.1)'};
+    border-color: rgba(99, 102, 241, 0.3);
   }
 `;
 
 const PatentIcon = styled(FaAward)`
-  font-size: 24px;
-  color: #0366d6;
-  margin-bottom: 12px;
+  font-size: 2rem;
+  color: ${props => props.theme.primary || '#6366F1'};
+  margin-bottom: 1rem;
 `;
 
 const PatentTitle = styled.h3`
-  font-size: 18px;
-  color: #0366d6;
-  margin-bottom: 8px;
+  font-size: 1.25rem;
+  color: ${props => props.theme.text};
+  margin-bottom: 0.75rem;
   font-weight: 600;
+  line-height: 1.4;
+`;
+
+const PatentNumber = styled.div`
+  font-size: 0.875rem;
+  color: ${props => props.theme.secondary || '#8B5CF6'};
+  font-weight: 500;
+  margin-bottom: 1rem;
+  font-family: 'Monaco', 'Courier New', monospace;
 `;
 
 const PatentDescription = styled.p`
-  font-size: 14px;
-  color: #586069;
-  margin-bottom: 12px;
+  font-size: 0.95rem;
+  color: ${props => props.theme.secondaryText};
+  margin-bottom: 1rem;
   flex-grow: 1;
+  line-height: 1.6;
 `;
 
 const PatentMetaInfo = styled.div`
-  font-size: 12px;
-  color: #6a737d;
-  margin-top: 8px;
+  font-size: 0.875rem;
+  color: ${props => props.theme.secondaryText};
+  margin-top: 0.5rem;
 `;
 
 const Icon = styled.span`
@@ -77,35 +113,42 @@ const CoAuthors = styled.div`
   color: ${props => props.theme.secondaryText};
 `;
 
-const FiledBadge = styled.span`
+const StatusBadge = styled.span`
   position: absolute;
-  top: 10px;
-  right: 10px;
-  background-color: #ffd700; // Yellow background
-  color: #000000; // Black text
-  padding: 2px 8px;
-  border-radius: 12px;
-  font-size: 12px;
-  font-weight: bold;
+  top: 1rem;
+  right: 1rem;
+  background: ${props => props.theme.gradient || 'linear-gradient(135deg, #6366F1, #8B5CF6)'};
+  color: #FFFFFF;
+  padding: 0.375rem 0.875rem;
+  border-radius: 20px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 `;
 
 const Patents = ({ theme }) => {
   return (
-    <PatentsSection id="patents">
+    <PatentsSection id="patents" theme={theme}>
       <Fade bottom duration={1000} distance="20px">
-        <SectionTitle>Patents</SectionTitle>
+        <SectionTitle theme={theme}>Patents</SectionTitle>
+        <SectionSubtitle theme={theme}>
+          Innovative solutions protecting intellectual property in authentication and security
+        </SectionSubtitle>
         <PatentsContainer>
           {patents.map((patent, index) => (
             <Fade key={index} bottom duration={1000} distance="20px">
-              <PatentCard>
-                <FiledBadge>Filed</FiledBadge>
-                <PatentIcon />
-                <PatentTitle>{patent.title}</PatentTitle>
-                <PatentDescription>
+              <PatentCard theme={theme}>
+                <StatusBadge theme={theme}>{patent.status}</StatusBadge>
+                <PatentIcon theme={theme} />
+                <PatentTitle theme={theme}>{patent.title}</PatentTitle>
+                <PatentNumber theme={theme}>{patent.number}</PatentNumber>
+                <PatentDescription theme={theme}>
                   {patent.description}
                 </PatentDescription>
-                <PatentMetaInfo>
-                  Filed on {patent.date}
+                <PatentMetaInfo theme={theme}>
+                  {patent.date}
                 </PatentMetaInfo>
                 {patent.coAuthors && patent.coAuthors.length > 0 && (
                   <CoAuthors theme={theme}>
