@@ -19,17 +19,21 @@ const ContactContainer = styled.div`
 `;
 
 const ContentWrapper = styled.div`
-  max-width: 800px;
+  max-width: 1200px;
   margin: 0 auto;
-  text-align: center;
+  display: flex;
+  align-items: center;
+  gap: 4rem;
 
   @media (max-width: 768px) {
+    flex-direction: column;
     text-align: center;
+    gap: 2rem;
   }
 `;
 
 const TextContent = styled.div`
-  width: 100%;
+  flex: 1;
 
   @media (max-width: 768px) {
     padding-right: 0;
@@ -62,24 +66,31 @@ const Description = styled.p`
   color: ${props => props.theme.secondaryText};
   margin-bottom: 3rem;
   max-width: 600px;
-  margin-left: auto;
-  margin-right: auto;
+
+  @media (max-width: 768px) {
+    margin-left: auto;
+    margin-right: auto;
+  }
 `;
 
 const SocialMediaWrapper = styled.div`
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
+
+  @media (max-width: 768px) {
+    justify-content: center;
+  }
 `;
 
 const ProfilePhotoContainer = styled(motion.div)`
-  width: 120px;
-  height: 120px;
+  width: 200px;
+  height: 200px;
   border-radius: 50%;
   border: 3px solid ${props => props.theme.divider};
   background: ${props => props.theme.cardBg};
   overflow: hidden;
-  margin: 0 auto 2rem;
+  flex-shrink: 0;
   transition: ${props => props.theme.transition};
 
   &:hover {
@@ -89,8 +100,8 @@ const ProfilePhotoContainer = styled(motion.div)`
   }
 
   @media (max-width: 768px) {
-    width: 100px;
-    height: 100px;
+    width: 150px;
+    height: 150px;
   }
 `;
 
@@ -106,37 +117,33 @@ const ProfileImage = styled.img`
   }
 `;
 
-const ContactContent = ({ theme }) => (
-  <TextContent>
-    <SectionNumber theme={theme}>09 — Contact</SectionNumber>
-    <Title theme={theme}>Let's Connect</Title>
-    <ProfilePhotoContainer
-      theme={theme}
-      initial={{ opacity: 0, scale: 0.8 }}
-      animate={{ opacity: 1, scale: 1 }}
-      transition={{
-        duration: 0.6,
-        delay: 0.3,
-        ease: [0.4, 0, 0.2, 1]
-      }}
-    >
-      <ProfileImage src={profilePic} alt="Profile" />
-    </ProfilePhotoContainer>
-    <Description theme={theme}>
-      Open to discussing innovative projects, collaboration opportunities, or just connecting with fellow tech enthusiasts.
-    </Description>
-    <SocialMediaWrapper>
-      <SocialMedia theme={theme} />
-    </SocialMediaWrapper>
-  </TextContent>
-);
-
 const Contact = ({ theme }) => {
   return (
     <ContactContainer theme={theme} id="contact">
       <Fade bottom duration={1000} distance="40px">
         <ContentWrapper>
-          <ContactContent theme={theme} />
+          <TextContent>
+            <SectionNumber theme={theme}>09 — Contact</SectionNumber>
+            <Title theme={theme}>Let's Connect</Title>
+            <Description theme={theme}>
+              Open to discussing innovative projects, collaboration opportunities, or just connecting with fellow tech enthusiasts.
+            </Description>
+            <SocialMediaWrapper>
+              <SocialMedia theme={theme} />
+            </SocialMediaWrapper>
+          </TextContent>
+          <ProfilePhotoContainer
+            theme={theme}
+            initial={{ opacity: 0, scale: 0.8 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{
+              duration: 0.6,
+              delay: 0.3,
+              ease: [0.4, 0, 0.2, 1]
+            }}
+          >
+            <ProfileImage src={profilePic} alt="Profile" />
+          </ProfilePhotoContainer>
         </ContentWrapper>
       </Fade>
     </ContactContainer>

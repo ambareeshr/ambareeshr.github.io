@@ -473,12 +473,6 @@ export const publications = [
 ];
 export const achievements = [
   {
-    title: "Conference Publication (ICSE - CSEE&T 2025)",
-    description: "\"Insights from the Frontline: GenAI Utilization Among Software Engineering Students\" - (Acceptance Rate - 12%)",
-    year: "2025",
-    category: "Research"
-  },
-  {
     title: "Technical Innovation Awards",
     description: "Received 5+ Technical Innovation Awards for contributing to AI Referral, Automatic Anomaly Detection, and Fleet price prediction, recognized as intellectual properties by Visa.",
     year: "2019-2023",
@@ -501,12 +495,6 @@ export const achievements = [
     description: "Developed an emotion detection application using Azure, selected as one of top three projects at university's innovation exhibition.",
     year: "2017",
     category: "Competition"
-  },
-  {
-    title: "Certifications",
-    description: "Deep Learning and Data Engineering from Udacity, and NLP Specialization from Coursera.",
-    year: "2019-2021",
-    category: "Professional Development"
   }
 ];
 
@@ -515,22 +503,22 @@ export const patents = [
   {
     title: "Secure Authentication Using Software Application",
     number: "PCT/US2023/075209",
-    status: "Patent Pending",
+    status: "Published",
     type: "Patent",
     date: "Filed Dec 19, 2023",
     description: "A novel approach to secure authentication in software applications, enhancing user security while maintaining a seamless user experience.",
-    link: "https://patentscope.wipo.int/search/en/detail.jsf?docId=WO2024129663",
-    coAuthors: ["Shruti Dahiya", "Swathykrishnan K Chandran"]
+    link: "https://patents.google.com/patent/WO2025071588A1",
+    coAuthors: ["Shruti Dahiya (Senior Manager)", "Swathykrishnan K Chandran"]
   },
   {
     title: "Detection Of Cross-Side Scripting Attacks Using Deep Learning Models",
     number: "PCT/US2024/042106",
-    status: "Patent Pending",
+    status: "Published",
     type: "Patent",
     date: "Filed Sep 17, 2024",
     description: "An innovative method for detecting Cross-Site Scripting (XSS) attacks using advanced deep learning models, significantly improving web application security.",
-    link: "https://patents.google.com/patent/WO2025058984A1",
-    coAuthors: ["Shruti Dahiya", "Swathykrishnan K Chandran"]
+    link: "https://patents.google.com/patent/WO2025038634A1",
+    coAuthors: ["Shruti Dahiya (Senior Manager)", "Swathykrishnan K Chandran"]
   },
   {
     title: "Secure Buy Now Pay Later (BNPL) for B2B",
@@ -540,7 +528,7 @@ export const patents = [
     date: "Published 2023",
     description: "Defensive Publication on secure BNPL for B2B using federated blockchain and Deep Learning methods.",
     link: "https://www.tdcommons.org/dpubs_series/5677/",
-    coAuthors: ["Shruti Dahiya"]
+    coAuthors: ["Shruti Dahiya (Senior Manager)"]
   },
   {
     title: "Recommendation of Distribution Channels for Merchants",
@@ -550,7 +538,7 @@ export const patents = [
     date: "Published 2023",
     description: "Defensive Publication using Machine Learning techniques and VisaNet data for merchant channel recommendations.",
     link: "https://www.tdcommons.org/dpubs_series/6071/",
-    coAuthors: ["Shruti Dahiya", "Swathykrishnan K Chandran"]
+    coAuthors: ["Shruti Dahiya (Senior Manager)", "Swathykrishnan K Chandran"]
   }
 ];
 

@@ -5,12 +5,12 @@ import { certifications } from '../myData';
 
 const Section = styled.section`
   min-height: 100vh;
-  padding: 8rem 10%;
+  padding: 5rem 10%;
   background: ${props => props.theme.body};
   position: relative;
 
   @media (max-width: 768px) {
-    padding: 6rem 5%;
+    padding: 4rem 5%;
   }
 `;
 
@@ -52,9 +52,14 @@ const SectionDescription = styled(motion.p)`
 
 const CertificationsList = styled.div`
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(4, 1fr);
   gap: 2rem;
-  max-width: 1000px;
+  max-width: 1400px;
+
+  @media (max-width: 1200px) {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+  }
 
   @media (max-width: 768px) {
     grid-template-columns: 1fr;

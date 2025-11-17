@@ -6,12 +6,12 @@ import { experience } from '../myData';
 
 const Section = styled.section`
   min-height: 100vh;
-  padding: 8rem 10%;
+  padding: 5rem 10%;
   background: ${props => props.theme.body};
   position: relative;
 
   @media (max-width: 768px) {
-    padding: 6rem 5%;
+    padding: 4rem 5%;
   }
 `;
 

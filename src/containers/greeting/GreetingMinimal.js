@@ -368,9 +368,9 @@ const GreetingMinimal = ({ theme }) => {
               <TLDRItem theme={theme} clickable onClick={() => scrollToSection('experience')}>
                 5+ years building GenAI & enterprise platforms at Visa
               </TLDRItem>
-              <TLDRItem theme={theme} clickable onClick={() => scrollToSection('publications')}>
-                <ClickableText onClick={() => scrollToSection('publications')}>2 Defensive Publications</ClickableText>{' + '}
-                <ClickableText onClick={() => scrollToSection('patents')}>2 Patents Pending</ClickableText>{' + '}
+              <TLDRItem theme={theme} clickable onClick={() => scrollToSection('patents')}>
+                <ClickableText onClick={() => scrollToSection('patents')}>2 Defensive Publications</ClickableText>{' + '}
+                <ClickableText onClick={() => scrollToSection('patents')}>2 Patents Published</ClickableText>{' + '}
                 <ClickableText onClick={() => scrollToSection('publications')}>ICSE Publication</ClickableText>
               </TLDRItem>
               <TLDRItem theme={theme} clickable onClick={() => scrollToSection('experience')}>
