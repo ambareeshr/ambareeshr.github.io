@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import styled from 'styled-components';
 import { motion, useInView, useAnimation } from 'framer-motion';
 import { patents } from '../myData';
@@ -62,14 +62,16 @@ const Grid = styled.div`
   }
 `;
 
-const PatentCard = styled(motion.div)`
+const PatentCard = styled(motion.a)`
   background: ${props => props.theme.cardBg};
   border: 1px solid ${props => props.theme.divider};
   padding: 2.5rem;
   position: relative;
   overflow: hidden;
-  cursor: pointer;
+  cursor: ${props => props.hasLink ? 'pointer' : 'default'};
   transition: ${props => props.theme.transition};
+  text-decoration: none;
+  display: block;
 
   &:hover {
     background: ${props => props.theme.cardBgHover};
@@ -142,6 +144,31 @@ const MetaItem = styled.div`
   }
 `;
 
+const CoAuthorsButton = styled.div`
+  font-size: 0.8rem;
+  color: ${props => props.theme.tertiaryText};
+  cursor: pointer;
+  transition: ${props => props.theme.transition};
+
+  &:hover {
+    color: ${props => props.theme.text};
+  }
+
+  span {
+    color: ${props => props.theme.secondaryText};
+    margin-left: 0.5rem;
+    text-decoration: underline;
+  }
+`;
+
+const CoAuthorsList = styled(motion.div)`
+  font-size: 0.85rem;
+  color: ${props => props.theme.secondaryText};
+  margin-top: 0.5rem;
+  padding-top: 0.5rem;
+  border-top: 1px solid ${props => props.theme.border};
+`;
+
 const StatusBadge = styled.div`
   position: absolute;
   top: 2rem;
@@ -156,10 +183,30 @@ const StatusBadge = styled.div`
   background: ${props => props.theme.cardBg};
 `;
 
+const TypeBadge = styled.div`
+  font-family: ${props => props.theme.fontMono};
+  font-size: 0.65rem;
+  padding: 0.3rem 0.6rem;
+  border: 1px solid ${props => props.theme.border};
+  color: ${props => props.theme.tertiaryText};
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  display: inline-block;
+  margin-bottom: 1rem;
+`;
+
 const Patents = ({ theme }) => {
   const containerRef = useRef(null);
   const isInView = useInView(containerRef, { once: true, margin: "-100px" });
   const mainControls = useAnimation();
+  const [expandedCoAuthors, setExpandedCoAuthors] = useState({});
+
+  const toggleCoAuthors = (index) => {
+    setExpandedCoAuthors(prev => ({
+      ...prev,
+      [index]: !prev[index]
+    }));
+  };
 
   useEffect(() => {
     if (isInView) {
@@ -200,7 +247,7 @@ const Patents = ({ theme }) => {
           initial="hidden"
           animate={mainControls}
         >
-          03 — Patents
+          03 — Intellectual Property
         </SectionNumber>
         <SectionTitle
           theme={theme}
@@ -208,7 +255,7 @@ const Patents = ({ theme }) => {
           initial="hidden"
           animate={mainControls}
         >
-          Intellectual Property
+          Patents & Publications
         </SectionTitle>
         <SectionDescription
           theme={theme}
@@ -216,7 +263,7 @@ const Patents = ({ theme }) => {
           initial="hidden"
           animate={mainControls}
         >
-          Innovative solutions in authentication and security, protecting novel approaches to real-world challenges.
+          Innovation in authentication, security, and financial technology. Patents pending and defensive publications protecting novel approaches.
         </SectionDescription>
       </SectionHeader>
 
@@ -231,8 +278,14 @@ const Patents = ({ theme }) => {
             key={index}
             theme={theme}
             variants={itemVariants}
+            as={patent.link ? motion.a : motion.div}
+            href={patent.link || undefined}
+            target={patent.link ? "_blank" : undefined}
+            rel={patent.link ? "noopener noreferrer" : undefined}
+            hasLink={!!patent.link}
           >
             <StatusBadge theme={theme}>{patent.status}</StatusBadge>
+            <TypeBadge theme={theme}>{patent.type}</TypeBadge>
             <PatentNumber theme={theme}>{patent.number}</PatentNumber>
             <PatentTitle theme={theme}>{patent.title}</PatentTitle>
             <PatentDescription theme={theme}>
@@ -240,12 +293,32 @@ const Patents = ({ theme }) => {
             </PatentDescription>
             <PatentMeta theme={theme}>
               <MetaItem theme={theme}>
-                Filed<span>{patent.date}</span>
+                {patent.type === 'Patent' ? 'Filed' : 'Published'}<span>{patent.date}</span>
               </MetaItem>
               {patent.coAuthors && patent.coAuthors.length > 0 && (
-                <MetaItem theme={theme}>
-                  Co-authors<span>{patent.coAuthors.length}</span>
-                </MetaItem>
+                <>
+                  <CoAuthorsButton
+                    theme={theme}
+                    onClick={(e) => {
+                      e.preventDefault();
+                      e.stopPropagation();
+                      toggleCoAuthors(index);
+                    }}
+                  >
+                    Co-authors<span>{patent.coAuthors.length} {expandedCoAuthors[index] ? '▲' : '▼'}</span>
+                  </CoAuthorsButton>
+                  {expandedCoAuthors[index] && (
+                    <CoAuthorsList
+                      theme={theme}
+                      initial={{ opacity: 0, height: 0 }}
+                      animate={{ opacity: 1, height: 'auto' }}
+                      exit={{ opacity: 0, height: 0 }}
+                      transition={{ duration: 0.2 }}
+                    >
+                      {patent.coAuthors.join(', ')}
+                    </CoAuthorsList>
+                  )}
+                </>
               )}
             </PatentMeta>
           </PatentCard>

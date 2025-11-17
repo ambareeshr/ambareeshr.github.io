@@ -270,7 +270,7 @@ const Recommendations = ({ theme }) => {
               <RecommendationText theme={theme} expanded={expandedCards[index]}>
                 "{rec.text}"
               </RecommendationText>
-              {rec.text.split('\n').length > 3 && (
+              {rec.text.length > 200 && (
                 <ExpandButton theme={theme} onClick={() => toggleExpand(index)}>
                   {expandedCards[index] ? (
                     <>Show Less <FaChevronUp /></>

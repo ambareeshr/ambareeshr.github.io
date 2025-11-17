@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useRef } from 'react';
 import styled from 'styled-components';
 import { motion, useInView, useAnimation } from 'framer-motion';
-import { FaGraduationCap, FaChevronDown, FaChevronUp } from 'react-icons/fa';
+import { FaGraduationCap, FaChevronDown, FaChevronUp, FaUniversity, FaBook } from 'react-icons/fa';
 import { degrees } from '../myData';
 
 const Section = styled.section`
@@ -120,10 +120,27 @@ const Institution = styled.h3`
   gap: 0.75rem;
 `;
 
-const UniversityIcon = styled(FaGraduationCap)`
+const UniversityIconBase = styled.span`
   font-size: 1.5rem;
   color: ${props => props.theme.secondaryText};
+  display: flex;
+  align-items: center;
+
+  svg {
+    font-size: 1.5rem;
+  }
 `;
+
+const getUniversityIcon = (universityName) => {
+  const name = universityName.toLowerCase();
+  if (name.includes('oregon state') || name.includes('osu')) {
+    return <FaUniversity />;
+  } else if (name.includes('anna')) {
+    return <FaBook />;
+  } else {
+    return <FaGraduationCap />;
+  }
+};
 
 const Degree = styled.div`
   font-size: 1.1rem;
@@ -299,7 +316,9 @@ const Education = ({ theme }) => {
               <TimelineDot theme={theme} />
               <Duration theme={theme}>{degree.duration}</Duration>
               <Institution theme={theme}>
-                <UniversityIcon theme={theme} />
+                <UniversityIconBase theme={theme}>
+                  {getUniversityIcon(degree.title)}
+                </UniversityIconBase>
                 {degree.title}
               </Institution>
               <Degree theme={theme}>{degree.subtitle}</Degree>

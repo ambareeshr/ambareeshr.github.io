@@ -51,70 +51,73 @@ const SectionDescription = styled(motion.p)`
 `;
 
 const CertificationsList = styled.div`
-  max-width: 900px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+  max-width: 1000px;
+
+  @media (max-width: 768px) {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
 `;
 
 const CertificationItem = styled(motion.a)`
-  display: block;
-  padding: 2.5rem 0;
-  border-bottom: 1px solid ${props => props.theme.divider};
+  background: ${props => props.theme.cardBg};
+  border: 1px solid ${props => props.theme.divider};
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
   position: relative;
   cursor: pointer;
   transition: ${props => props.theme.transition};
   text-decoration: none;
-
-  &:last-child {
-    border-bottom: none;
-  }
+  overflow: hidden;
 
   &:hover {
-    padding-left: 2rem;
-    border-bottom-color: ${props => props.theme.borderHover};
+    background: ${props => props.theme.cardBgHover};
+    border-color: ${props => props.theme.borderHover};
+    transform: translateY(-4px);
+    box-shadow: ${props => props.theme.cardHoverShadow};
 
     &:before {
       opacity: 1;
-      transform: translateX(0);
     }
   }
 
   &:before {
-    content: '→';
+    content: '';
     position: absolute;
+    top: 0;
     left: 0;
-    top: 50%;
-    transform: translate(-1rem, -50%);
-    font-size: 1.2rem;
-    color: ${props => props.theme.text};
+    width: 100%;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, ${props => props.theme.text}, transparent);
     opacity: 0;
-    transition: ${props => props.theme.transition};
+    transition: opacity 0.3s ease;
   }
 
   @media (max-width: 768px) {
-    padding: 2rem 0;
-  }
-`;
-
-const CertificationHeader = styled.div`
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-  gap: 2rem;
-  margin-bottom: 0.75rem;
-
-  @media (max-width: 768px) {
-    flex-direction: column;
-    gap: 0.5rem;
+    padding: 1.5rem;
   }
 `;
 
 const CertificationTitle = styled.h3`
-  font-size: 1.3rem;
+  font-size: 1.2rem;
   font-weight: 600;
   line-height: 1.4;
   color: ${props => props.theme.text};
   margin: 0;
-  flex: 1;
   letter-spacing: -0.02em;
+`;
+
+const Provider = styled.div`
+  font-family: ${props => props.theme.fontMono};
+  font-size: 0.85rem;
+  color: ${props => props.theme.secondaryText};
+  font-style: italic;
+  flex: 1;
 `;
 
 const ExternalLink = styled.span`
@@ -127,18 +130,13 @@ const ExternalLink = styled.span`
   letter-spacing: 0.1em;
   white-space: nowrap;
   transition: ${props => props.theme.transition};
+  align-self: flex-start;
+  margin-top: auto;
 
   ${CertificationItem}:hover & {
     border-color: ${props => props.theme.borderHover};
     color: ${props => props.theme.text};
   }
-`;
-
-const Provider = styled.div`
-  font-family: ${props => props.theme.fontMono};
-  font-size: 0.85rem;
-  color: ${props => props.theme.secondaryText};
-  font-style: italic;
 `;
 
 const Certifications = ({ theme }) => {
@@ -220,11 +218,9 @@ const Certifications = ({ theme }) => {
             target="_blank"
             rel="noopener noreferrer"
           >
-            <CertificationHeader>
-              <CertificationTitle theme={theme}>{cert.title}</CertificationTitle>
-              <ExternalLink theme={theme}>View Credential</ExternalLink>
-            </CertificationHeader>
+            <CertificationTitle theme={theme}>{cert.title}</CertificationTitle>
             <Provider theme={theme}>{cert.subtitle}</Provider>
+            <ExternalLink theme={theme}>View Credential</ExternalLink>
           </CertificationItem>
         ))}
       </CertificationsList>

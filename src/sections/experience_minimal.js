@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useRef } from 'react';
 import styled from 'styled-components';
 import { motion, useInView, useAnimation, AnimatePresence } from 'framer-motion';
-import { FaBuilding } from 'react-icons/fa';
+import { FaBuilding, FaCreditCard, FaUniversity } from 'react-icons/fa';
 import { experience } from '../myData';
 
 const Section = styled.section`
@@ -90,10 +90,27 @@ const CompanyName = styled.h3`
   gap: 0.75rem;
 `;
 
-const CompanyIcon = styled(FaBuilding)`
+const CompanyIconBase = styled.span`
   font-size: 1.5rem;
   color: ${props => props.theme.secondaryText};
+  display: flex;
+  align-items: center;
+
+  svg {
+    font-size: 1.5rem;
+  }
 `;
+
+const getCompanyIcon = (companyName) => {
+  const name = companyName.toLowerCase();
+  if (name.includes('visa')) {
+    return <FaCreditCard />;
+  } else if (name.includes('oregon state') || name.includes('osu')) {
+    return <FaUniversity />;
+  } else {
+    return <FaBuilding />;
+  }
+};
 
 const Role = styled.div`
   font-family: ${props => props.theme.fontMono};
@@ -351,7 +368,9 @@ const Experience = ({ theme }) => {
             <CompanyHeader>
               <CompanyMeta>
                 <CompanyName theme={theme}>
-                  <CompanyIcon theme={theme} />
+                  <CompanyIconBase theme={theme}>
+                    {getCompanyIcon(company.company)}
+                  </CompanyIconBase>
                   {company.company}
                 </CompanyName>
                 <Duration theme={theme}>{company.duration}</Duration>

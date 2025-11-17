@@ -469,22 +469,6 @@ export const publications = [
     type: "Thesis",
     venue: "SemEval RumorEval",
     coAuthors: []
-  },
-  {
-    title: "Secure Buy Now Pay Later (BNPL) for B2B",
-    description: "Defensive Publication 5677 on secure BNPL for B2B using federated blockchain and Deep Learning methods.",
-    link: "https://www.tdcommons.org/dpubs_series/5677/",
-    type: "Defensive Publication",
-    venue: "TD Commons",
-    coAuthors: ["Shruti Dahiya"]
-  },
-  {
-    title: "Recommendation of Distribution Channels for Merchants",
-    description: "Defensive Publication 6071 using Machine Learning techniques and VisaNet data.",
-    link: "https://www.tdcommons.org/dpubs_series/6071/",
-    type: "Defensive Publication",
-    venue: "TD Commons",
-    coAuthors: ["Shruti Dahiya", "Swathykrishnan K Chandran"]
   }
 ];
 export const achievements = [
@@ -531,7 +515,8 @@ export const patents = [
   {
     title: "Secure Authentication Using Software Application",
     number: "PCT/US2023/075209",
-    status: "Pending",
+    status: "Patent Pending",
+    type: "Patent",
     date: "Filed Dec 19, 2023",
     description: "A novel approach to secure authentication in software applications, enhancing user security while maintaining a seamless user experience.",
     coAuthors: ["Shruti Dahiya", "Swathykrishnan K Chandran"]
@@ -539,11 +524,32 @@ export const patents = [
   {
     title: "Detection Of Cross-Side Scripting Attacks Using Deep Learning Models",
     number: "PCT/US2024/042106",
-    status: "Pending",
+    status: "Patent Pending",
+    type: "Patent",
     date: "Filed Sep 17, 2024",
     description: "An innovative method for detecting Cross-Site Scripting (XSS) attacks using advanced deep learning models, significantly improving web application security.",
     coAuthors: ["Shruti Dahiya", "Swathykrishnan K Chandran"]
   },
+  {
+    title: "Secure Buy Now Pay Later (BNPL) for B2B",
+    number: "Defensive Publication 5677",
+    status: "Published",
+    type: "Defensive Publication",
+    date: "Published 2023",
+    description: "Defensive Publication on secure BNPL for B2B using federated blockchain and Deep Learning methods.",
+    link: "https://www.tdcommons.org/dpubs_series/5677/",
+    coAuthors: ["Shruti Dahiya"]
+  },
+  {
+    title: "Recommendation of Distribution Channels for Merchants",
+    number: "Defensive Publication 6071",
+    status: "Published",
+    type: "Defensive Publication",
+    date: "Published 2023",
+    description: "Defensive Publication using Machine Learning techniques and VisaNet data for merchant channel recommendations.",
+    link: "https://www.tdcommons.org/dpubs_series/6071/",
+    coAuthors: ["Shruti Dahiya", "Swathykrishnan K Chandran"]
+  }
 ];
 
 export const recommendations = [
