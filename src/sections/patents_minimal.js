@@ -46,13 +46,13 @@ const SectionDescription = styled(motion.p)`
   font-size: 1.1rem;
   line-height: 1.8;
   color: ${props => props.theme.secondaryText};
-  max-width: 600px;
+  max-width: 900px;
   margin: 0;
 `;
 
 const Grid = styled.div`
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  grid-template-columns: repeat(2, 1fr);
   gap: 2rem;
   max-width: 1200px;
 
@@ -82,6 +82,12 @@ const PatentCard = styled(motion.a)`
     &:before {
       opacity: 1;
     }
+
+    ${props => props.hasLink && `
+      &:after {
+        opacity: 1;
+      }
+    `}
   }
 
   &:before {
@@ -95,6 +101,27 @@ const PatentCard = styled(motion.a)`
     opacity: 0;
     transition: opacity 0.3s ease;
   }
+
+  ${props => props.hasLink && `
+    &:after {
+      content: 'View →';
+      position: absolute;
+      bottom: 2rem;
+      right: 2rem;
+      padding: 0.6rem 1.2rem;
+      background: ${props.theme.text};
+      color: ${props.theme.body};
+      font-family: ${props.theme.fontMono};
+      font-size: 0.75rem;
+      font-weight: 600;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      border-radius: 2px;
+      opacity: 0;
+      transition: opacity 0.3s ease;
+      pointer-events: none;
+    }
+  `}
 
   @media (max-width: 768px) {
     padding: 2rem;

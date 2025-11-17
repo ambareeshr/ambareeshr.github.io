@@ -1,8 +1,10 @@
 import React from "react";
 import styled from 'styled-components';
 import { Fade } from "react-reveal";
+import { motion } from 'framer-motion';
 import SocialMedia from "../components/socialMedia/SocialMedia.js";
 import { contactPageData } from "../myData.js";
+import profilePic from '../android-chrome-512x512.png';
 
 const ContactContainer = styled.div`
   background: ${props => props.theme.body};
@@ -70,10 +72,56 @@ const SocialMediaWrapper = styled.div`
   align-items: center;
 `;
 
+const ProfilePhotoContainer = styled(motion.div)`
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  border: 3px solid ${props => props.theme.divider};
+  background: ${props => props.theme.cardBg};
+  overflow: hidden;
+  margin: 0 auto 2rem;
+  transition: ${props => props.theme.transition};
+
+  &:hover {
+    border-color: ${props => props.theme.text};
+    transform: scale(1.05);
+    box-shadow: ${props => props.theme.cardHoverShadow};
+  }
+
+  @media (max-width: 768px) {
+    width: 100px;
+    height: 100px;
+  }
+`;
+
+const ProfileImage = styled.img`
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: grayscale(100%);
+  transition: filter 0.3s ease;
+
+  ${ProfilePhotoContainer}:hover & {
+    filter: grayscale(0%);
+  }
+`;
+
 const ContactContent = ({ theme }) => (
   <TextContent>
     <SectionNumber theme={theme}>09 — Contact</SectionNumber>
     <Title theme={theme}>Let's Connect</Title>
+    <ProfilePhotoContainer
+      theme={theme}
+      initial={{ opacity: 0, scale: 0.8 }}
+      animate={{ opacity: 1, scale: 1 }}
+      transition={{
+        duration: 0.6,
+        delay: 0.3,
+        ease: [0.4, 0, 0.2, 1]
+      }}
+    >
+      <ProfileImage src={profilePic} alt="Profile" />
+    </ProfilePhotoContainer>
     <Description theme={theme}>
       Open to discussing innovative projects, collaboration opportunities, or just connecting with fellow tech enthusiasts.
     </Description>

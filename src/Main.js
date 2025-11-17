@@ -5,7 +5,6 @@ import Contact from "./sections/contact";
 import Footer from "./shared/footer/Footer";
 import TopButton from "./shared/topButton/TopButton";
 import SectionNav from "./shared/sectionNav/SectionNav";
-import FloatingPhoto from "./components/FloatingPhoto";
 import EducationMinimal from "./sections/education_minimal";
 import ExperienceMinimal from "./sections/experience_minimal";
 import {Awards} from "./sections/awards_minimal";
@@ -36,7 +35,6 @@ export default class Main extends Component {
             <Contact theme={this.props.theme} />
             <Footer theme={this.props.theme} />
             <TopButton theme={this.props.theme} />
-            <FloatingPhoto theme={this.props.theme} />
         </div>
       );
     }

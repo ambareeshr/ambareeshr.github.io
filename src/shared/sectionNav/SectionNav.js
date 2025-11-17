@@ -95,6 +95,7 @@ const sections = [
   { id: 'awards', label: '06 Awards' },
   { id: 'certifications', label: '07 Certifications' },
   { id: 'recommendations', label: '08 Recommendations' },
+  { id: 'contact', label: '09 Contact' },
 ];
 
 const SectionNav = ({ theme }) => {

@@ -47,7 +47,7 @@ const SectionDescription = styled(motion.p)`
   font-size: 1.1rem;
   line-height: 1.8;
   color: ${props => props.theme.secondaryText};
-  max-width: 600px;
+  max-width: 900px;
   margin: 0;
 `;
 
