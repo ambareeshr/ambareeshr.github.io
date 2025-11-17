@@ -19,7 +19,8 @@ export default class Main extends Component {
     const theme = this.props.theme;
     console.log(theme);
     return (
-        <div>
+        <div style={{ background: theme.body }}>
+            <SectionNav theme={this.props.theme} />
             <Home theme={this.props.theme} />
             <Skills theme={this.props.theme} />
             <Patents theme={this.props.theme} />
@@ -27,8 +28,9 @@ export default class Main extends Component {
             <Education theme={this.props.theme} />
             <Experience theme={this.props.theme} />
             {/*<Projects theme={theme} />*/}
-            {/*<Awards theme={theme} />*/}
-            <Certifications theme={this.props.theme} />
+            <Awards theme={this.props.theme} />
+            <CertificationsMinimal theme={this.props.theme} />
+            <RecommendationsMinimal theme={this.props.theme} />
             <Contact theme={this.props.theme} />
             <Footer theme={this.props.theme} />
             <TopButton theme={this.props.theme} />
