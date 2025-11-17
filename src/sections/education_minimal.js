@@ -16,11 +16,11 @@ const Section = styled.section`
 `;
 
 const SectionHeader = styled.div`
-  margin-bottom: 6rem;
+  margin-bottom: 3rem;
   max-width: 800px;
 
   @media (max-width: 768px) {
-    margin-bottom: 4rem;
+    margin-bottom: 2rem;
   }
 `;
 
@@ -72,7 +72,7 @@ const TimelineContainer = styled.div`
 
 const DegreeCard = styled(motion.div)`
   padding-left: 4rem;
-  margin-bottom: 4rem;
+  margin-bottom: 2rem;
   position: relative;
 
   &:last-child {
